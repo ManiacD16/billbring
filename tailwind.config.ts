@@ -11,31 +11,31 @@ export default {
     extend: {
       colors: {
         ink: {
-          950: "#07111F",
-          900: "#0C1933",
-          800: "#132449",
-          700: "#1A2E59",
-          600: "#294371",
+          950: "#10213F",
+          900: "#1A2E59",
+          800: "#213966",
+          700: "#2A477A",
+          600: "#3C5B8D",
         },
         brand: {
-          800: "#03392B",
-          700: "#044B38",
-          600: "#056147",
-          500: "#087D5A",
-          400: "#12AF7C",
-          300: "#74D9B7",
+          800: "#075F47",
+          700: "#078562",
+          600: "#0B996E",
+          500: "#12AF7C",
+          400: "#39C694",
+          300: "#76DDB9",
           100: "#DDF8EE",
-          50: "#F1FCF8",
+          50: "#F0FCF7",
         },
       },
       boxShadow: {
-        soft: "0 30px 90px -44px rgba(8,18,37,.28)",
-        card: "0 22px 60px -38px rgba(8,18,37,.28)",
-        glow: "0 24px 78px -30px rgba(18,175,124,.62)",
-        lift: "0 40px 100px -44px rgba(8,18,37,.36)",
+        soft: "0 28px 80px -52px rgba(26,46,89,.28)",
+        card: "0 22px 70px -50px rgba(26,46,89,.26)",
+        glow: "0 22px 72px -32px rgba(18,175,124,.48)",
+        lift: "0 34px 90px -50px rgba(26,46,89,.34)",
       },
       backgroundImage: {
-        "hero-grid": "linear-gradient(rgba(26,46,89,.055) 1px, transparent 1px), linear-gradient(90deg, rgba(26,46,89,.055) 1px, transparent 1px)",
+        "hero-grid": "linear-gradient(rgba(26,46,89,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(26,46,89,.045) 1px, transparent 1px)",
       },
       keyframes: {
         float: {

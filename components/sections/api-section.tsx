@@ -40,7 +40,7 @@ export function ApiSection() {
               <div className="absolute -inset-10 rounded-full bg-brand-500/[.10] blur-3xl" />
               <motion.div whileHover={{ y: -4 }} transition={{ duration: .45 }} className="relative overflow-hidden rounded-[28px] border border-white/[.10] bg-[#06101f]/[.92] shadow-2xl">
                 <div className="flex items-center justify-between border-b border-white/[.10] px-5 py-4">
-                  <div className="flex items-center gap-2"><span className="h-2.5 w-2.5 rounded-full bg-rose-400/[.80]"/><span className="h-2.5 w-2.5 rounded-full bg-amber-300/[.80]"/><span className="h-2.5 w-2.5 rounded-full bg-emerald-400/[.80]"/></div>
+                  <div className="flex items-center gap-2"><span className="h-2.5 w-2.5 rounded-full bg-white/[.22]"/><span className="h-2.5 w-2.5 rounded-full bg-white/[.22]"/><span className="h-2.5 w-2.5 rounded-full bg-brand-500"/></div>
                   <div className="flex items-center gap-2 text-[9px] font-bold uppercase tracking-[.12em] text-slate-500"><TerminalSquare className="h-3.5 w-3.5" /> BillBring API · sample request</div>
                 </div>
 
@@ -49,7 +49,7 @@ export function ApiSection() {
                     <div className="absolute left-0 top-0 h-10 w-full bg-gradient-to-b from-brand-500/[.04] to-transparent" />
                     {codeLines.map(([left,right], index) => (
                       <motion.div key={index} initial={{ opacity: .2, x: -4 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: .25 + index * .08, duration: .45 }} className="flex min-h-7 items-center">
-                        <span className={left === "POST" ? "font-bold text-brand-300" : left.includes('amount') || left.includes('currency') || left.includes('customer') ? "text-cyan-300" : "text-slate-400"}>{left}</span><span className="text-amber-200">{right}</span>
+                        <span className={left === "POST" ? "font-bold text-brand-300" : left.includes('amount') || left.includes('currency') || left.includes('customer') ? "text-brand-300" : "text-slate-400"}>{left}</span><span className="text-amber-200">{right}</span>
                       </motion.div>
                     ))}
                     <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: .92 }} className="mt-6 rounded-2xl border border-brand-400/[.15] bg-brand-500/[.07] p-4 text-[11px] leading-6">

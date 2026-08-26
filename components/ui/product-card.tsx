@@ -52,7 +52,7 @@ export function ProductCard({ product, index, featured = false }: { product: Pro
           <span className="grid h-7 w-7 place-items-center rounded-full bg-brand-500/[.10] text-brand-700 transition duration-500 group-hover:rotate-12 group-hover:bg-brand-600 group-hover:text-white dark:text-brand-300"><ArrowUpRight className="h-3.5 w-3.5" /></span>
         </Link>
       </div>
-      <div className="pointer-events-none absolute inset-x-7 bottom-0 h-px origin-left scale-x-0 bg-gradient-to-r from-brand-500 via-cyan-400 to-transparent transition-transform duration-700 ease-[cubic-bezier(.22,1,.36,1)] group-hover:scale-x-100" />
+      <div className="pointer-events-none absolute inset-x-7 bottom-0 h-px origin-left scale-x-0 bg-gradient-to-r from-brand-500 via-brand-300 to-transparent transition-transform duration-700 ease-[cubic-bezier(.22,1,.36,1)] group-hover:scale-x-100" />
     </motion.article>
   );
 }
