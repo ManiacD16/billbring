@@ -1,58 +1,34 @@
 "use client";
 
-import { motion, useMotionValue, useReducedMotion, useSpring, useTransform } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
-import type { MouseEvent } from "react";
+import { ArrowUpRight } from "lucide-react";
 import type { Product } from "@/data/products";
-import { ProductVisual } from "@/components/ui/product-visual";
-import { cn } from "@/lib/cn";
+import { getProductImage } from "@/data/product-images";
 
 export function ProductCard({ product, index, featured = false }: { product: Product; index: number; featured?: boolean }) {
-  const reduced = useReducedMotion();
-  const mx = useMotionValue(50);
-  const my = useMotionValue(50);
-  const rotateXRaw = useTransform(my, [0, 100], [2.2, -2.2]);
-  const rotateYRaw = useTransform(mx, [0, 100], [-2.2, 2.2]);
-  const rotateX = useSpring(rotateXRaw, { stiffness: 150, damping: 24 });
-  const rotateY = useSpring(rotateYRaw, { stiffness: 150, damping: 24 });
   const Icon = product.icon;
-
-  const move = (event: MouseEvent<HTMLElement>) => {
-    if (reduced) return;
-    const rect = event.currentTarget.getBoundingClientRect();
-    mx.set(((event.clientX - rect.left) / rect.width) * 100);
-    my.set(((event.clientY - rect.top) / rect.height) * 100);
-    event.currentTarget.style.setProperty("--spot-x", `${event.clientX - rect.left}px`);
-    event.currentTarget.style.setProperty("--spot-y", `${event.clientY - rect.top}px`);
-  };
+  const image = getProductImage(product.slug);
 
   return (
-    <motion.article
-      onMouseMove={move}
-      onMouseLeave={() => { mx.set(50); my.set(50); }}
-      style={reduced ? undefined : { rotateX, rotateY, transformPerspective: 1100 }}
-      className={cn(
-        "card-sheen group relative min-h-[360px] overflow-hidden rounded-[32px] border border-slate-200/[.80] bg-white p-6 shadow-card transition-[box-shadow,border-color] duration-500 hover:border-brand-500/[.25] hover:shadow-lift dark:border-white/[.10] dark:bg-ink-900/[.65]",
-        featured && "min-h-[408px]",
-      )}
-    >
-      <div className="pointer-events-none absolute inset-0 opacity-[.00] transition-opacity duration-500 group-hover:opacity-[1]" style={{ background: "radial-gradient(400px circle at var(--spot-x, 72%) var(--spot-y, 28%), rgba(18,175,124,.115), transparent 58%)" }} />
-      <ProductVisual product={product} large={featured} />
-      <div className="relative z-10 flex h-full max-w-[82%] flex-col sm:max-w-[72%]">
-        <div className="flex items-center gap-3">
-          <span className="icon-tile h-11 w-11 text-brand-600 transition duration-500 group-hover:-rotate-3 group-hover:scale-105 dark:text-brand-300"><Icon className={cn("h-5 w-5", product.accent)} /></span>
-          <span className="text-[10px] font-black uppercase tracking-[.2em] text-slate-400">{String(index + 1).padStart(2, "0")}</span>
+    <article className={`group relative h-full overflow-hidden rounded-[26px] border border-slate-200/80 bg-white shadow-[0_24px_70px_-50px_rgba(8,18,37,.5)] transition duration-500 hover:-translate-y-1 hover:border-brand-500/25 hover:shadow-[0_32px_82px_-48px_rgba(8,18,37,.55)] dark:border-white/[.09] dark:bg-[#0b1118] ${featured ? "min-h-[500px]" : "min-h-[450px]"}`}>
+      <div className={`relative overflow-hidden bg-slate-100 dark:bg-black ${featured ? "aspect-[16/9]" : "aspect-[16/10]"}`}>
+        <Image src={image} alt={`${product.name} by BillBring`} fill sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw" className="object-cover transition duration-700 group-hover:scale-[1.025]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent" />
+        <span className="absolute left-4 top-4 rounded-full border border-white/20 bg-black/35 px-3 py-1.5 text-[9px] font-black uppercase tracking-[.14em] text-white backdrop-blur-md">{String(index + 1).padStart(2, "0")} · {product.group}</span>
+      </div>
+
+      <div className="flex min-h-[220px] flex-col p-6 sm:p-7">
+        <div className="flex items-start justify-between gap-4">
+          <span className="grid h-11 w-11 place-items-center rounded-xl bg-brand-500/[.09] text-brand-700 dark:text-brand-300"><Icon className={`h-5 w-5 ${product.accent}`} /></span>
+          <span className="text-right text-[9px] font-black uppercase tracking-[.13em] text-slate-400">{product.category}</span>
         </div>
-        <h3 className={cn("mt-8 max-w-[16ch] font-black leading-[1.01] tracking-[-.05em] text-ink-950 dark:text-white", featured ? "text-[30px] sm:text-[36px]" : "text-[26px] sm:text-[28px]")}>{product.name}</h3>
-        <p className="mt-2 text-[10px] font-black uppercase tracking-[.12em] text-slate-400">{product.category}</p>
-        <p className="mt-5 line-clamp-3 max-w-[39ch] text-sm leading-6 text-slate-600 dark:text-slate-300">{product.blurb}</p>
-        <Link href={`/products/${product.slug}`} aria-label={`Explore ${product.name}`} className="mt-auto inline-flex w-fit items-center gap-2 pt-7 text-sm font-black text-ink-950 outline-none dark:text-white focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-4">
-          <span className="link-underline">Explore product</span>
-          <span className="grid h-7 w-7 place-items-center rounded-full bg-brand-500/[.10] text-brand-700 transition duration-500 group-hover:rotate-12 group-hover:bg-brand-600 group-hover:text-white dark:text-brand-300"><ArrowUpRight className="h-3.5 w-3.5" /></span>
+        <h3 className="mt-6 text-[26px] font-black leading-[1.02] tracking-[-.045em] text-ink-950 dark:text-white">{product.name}</h3>
+        <p className="mt-3 line-clamp-2 text-sm leading-6 text-slate-500 dark:text-slate-400">{product.blurb}</p>
+        <Link href={`/products/${product.slug}`} aria-label={`Explore ${product.name}`} className="mt-auto inline-flex w-fit items-center gap-2 pt-7 text-sm font-black text-ink-950 dark:text-white">
+          Explore product <span className="grid h-7 w-7 place-items-center rounded-full bg-brand-500/[.10] text-brand-700 transition duration-300 group-hover:bg-brand-600 group-hover:text-white dark:text-brand-300"><ArrowUpRight className="h-3.5 w-3.5" /></span>
         </Link>
       </div>
-      <div className="pointer-events-none absolute inset-x-7 bottom-0 h-px origin-left scale-x-0 bg-gradient-to-r from-brand-500 via-brand-300 to-transparent transition-transform duration-700 ease-[cubic-bezier(.22,1,.36,1)] group-hover:scale-x-100" />
-    </motion.article>
+    </article>
   );
 }

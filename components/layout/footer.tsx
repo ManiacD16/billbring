@@ -1,47 +1,49 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUp, ArrowUpRight } from "lucide-react";
-import { productGroups, products } from "@/data/products";
+import { ArrowUpRight } from "lucide-react";
 
-const links = [
-  ["Solutions", "/solutions"],
-  ["Developers", "/developers"],
-  ["Company", "/company"],
-  ["Pricing", "/pricing"],
-  ["Support", "/support"],
-  ["Partner", "/partner"],
+const columns = [
+  {
+    title: "Company",
+    links: [["About Us", "/company"], ["Careers", "/company#careers"], ["Pricing", "/pricing"], ["Contact Us", "/support"]],
+  },
+  {
+    title: "Retailer",
+    links: [["Become a Retailer", "/solutions#retailers"], ["Benefits", "/solutions#retailers"], ["Services", "/products"], ["Support", "/support"]],
+  },
+  {
+    title: "Distributor",
+    links: [["Become a Distributor", "/partner"], ["Benefits", "/partner"], ["Resources", "/developers"], ["Support", "/support"]],
+  },
+  {
+    title: "Merchant",
+    links: [["PayBring Gateway", "/products/paybring"], ["Collections", "/products/payment-gateway-collection"], ["Payouts", "/products/bringpayout"], ["Developers", "/developers"]],
+  },
+  {
+    title: "Support",
+    links: [["Help Center", "/support"], ["Products", "/products"], ["Solutions", "/solutions"], ["Partner Program", "/partner"]],
+  },
 ] as const;
 
 export function Footer() {
   return (
-    <footer className="relative mt-12 overflow-hidden bg-ink-950 pb-7 pt-10 text-white dark:bg-[#061129]">
-      <div className="absolute -right-24 -top-24 h-80 w-80 rounded-full border-[46px] border-brand-500/[.10]" />
-      <div className="section-shell relative">
-        <div className="grid gap-10 border-b border-white/[.10] py-10 sm:py-14 lg:grid-cols-[1.2fr_.8fr] lg:items-end">
+    <footer className="mt-8 bg-[#061b38] pb-7 pt-12 text-white dark:bg-[#02060b]">
+      <div className="section-shell">
+        <div className="grid gap-10 border-b border-white/[.10] pb-11 lg:grid-cols-[1.15fr_2fr]">
           <div>
-            <p className="text-[10px] font-bold uppercase tracking-[.18em] text-brand-300">BillBring financial infrastructure</p>
-            <h2 className="mt-5 max-w-[12ch] font-display text-[clamp(3rem,6vw,6.6rem)] font-semibold leading-[.84] tracking-[-.075em]">A simpler way to bring money journeys together.</h2>
-          </div>
-          <div className="lg:justify-self-end">
-            <Link href="/partner" className="group inline-flex min-h-14 items-center gap-3 rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold text-ink-950 transition hover:-translate-y-1 hover:bg-brand-400">Become a Partner <ArrowUpRight className="h-4 w-4 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5" /></Link>
-          </div>
-        </div>
-
-        <div className="grid gap-12 border-b border-white/[.10] py-12 lg:grid-cols-[.72fr_1.28fr]">
-          <div>
-            <Image src="/brand/billbring-white.svg" alt="BillBring" width={184} height={41} className="h-10 w-auto" />
-            <p className="mt-5 max-w-sm text-sm leading-7 text-slate-400">One connected platform for collections, payouts, bill payments, transfers and financial services.</p>
-            <div className="mt-8 flex flex-wrap gap-2">
-              {links.map(([label, href]) => <Link key={href} href={href} className="rounded-full border border-white/[.10] px-3 py-2 text-[10px] font-semibold text-slate-300 transition hover:border-brand-400/[.35] hover:text-brand-300">{label}</Link>)}
-            </div>
+            <Image src="/brand/billbring-white.svg" alt="BillBring" width={180} height={40} className="h-10 w-auto" />
+            <p className="mt-5 max-w-[310px] text-sm leading-7 text-slate-400">Bringing bills and payments together seamlessly with one connected platform for everyday financial services.</p>
+            <Link href="/partner" className="group mt-6 inline-flex h-11 items-center gap-2 rounded-lg bg-brand-500 px-4 text-xs font-bold text-white transition hover:-translate-y-0.5 hover:bg-brand-400">
+              Become a Partner <ArrowUpRight className="h-3.5 w-3.5 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+            </Link>
           </div>
 
-          <div className="grid gap-8 sm:grid-cols-2 xl:grid-cols-4">
-            {productGroups.map((group) => (
-              <div key={group}>
-                <p className="mb-4 text-[9px] font-bold uppercase tracking-[.15em] text-slate-500">{group}</p>
-                <div className="space-y-2.5">
-                  {products.filter((product) => product.group === group).map((product) => <Link key={product.slug} href={`/products/${product.slug}`} className="block w-fit text-[12px] font-medium leading-5 text-slate-400 transition hover:text-brand-300">{product.name}</Link>)}
+          <div className="grid grid-cols-2 gap-x-7 gap-y-9 sm:grid-cols-3 xl:grid-cols-5">
+            {columns.map((column) => (
+              <div key={column.title}>
+                <p className="text-[9px] font-black uppercase tracking-[.14em] text-slate-500">{column.title}</p>
+                <div className="mt-4 space-y-3">
+                  {column.links.map(([label, href]) => <Link key={`${column.title}-${label}`} href={href} className="block w-fit text-[11px] font-medium text-slate-300 transition hover:text-brand-300">{label}</Link>)}
                 </div>
               </div>
             ))}
@@ -51,9 +53,9 @@ export function Footer() {
         <div className="flex flex-col gap-4 pt-6 text-[10px] text-slate-500 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} BillBring. All rights reserved.</p>
           <div className="flex flex-wrap items-center gap-5">
-            <Link href="/company#privacy" className="transition hover:text-slate-300">Privacy</Link>
-            <Link href="/company#terms" className="transition hover:text-slate-300">Terms</Link>
-            <a href="#main-content" className="group inline-flex items-center gap-2 font-semibold text-slate-400 transition hover:text-brand-300">Back to top <span className="grid h-7 w-7 place-items-center rounded-full border border-white/[.10]"><ArrowUp className="h-3 w-3 transition group-hover:-translate-y-0.5" /></span></a>
+            <Link href="/company#privacy" className="transition hover:text-slate-300">Privacy Policy</Link>
+            <Link href="/company#terms" className="transition hover:text-slate-300">Terms & Conditions</Link>
+            <Link href="/support" className="transition hover:text-slate-300">Grievance & Support</Link>
           </div>
         </div>
       </div>

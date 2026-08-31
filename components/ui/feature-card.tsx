@@ -3,14 +3,13 @@ import { cn } from "@/lib/cn";
 
 export function FeatureCard({ icon: Icon, title, copy, id, className }: { icon: LucideIcon; title: string; copy: string; id?: string; className?: string }) {
   return (
-    <article id={id} data-reveal className={cn("card-sheen interactive-lift group relative min-h-[280px] scroll-mt-32 overflow-hidden rounded-[30px] border border-slate-200/[.80] bg-white p-6 shadow-card dark:border-white/[.10] dark:bg-ink-900/[.60]", className)}>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_88%_12%,rgba(18,175,124,.11),transparent_40%)] opacity-[.00] transition-opacity duration-500 group-hover:opacity-[1]" />
-      <Icon className="absolute -right-8 -top-8 h-40 w-40 rotate-12 stroke-[.52] text-brand-500/[.075] transition-transform duration-700 ease-[cubic-bezier(.22,1,.36,1)] group-hover:rotate-4 group-hover:scale-[1.08]" aria-hidden="true" />
+    <article id={id} data-reveal className={cn("group relative min-h-[235px] scroll-mt-32 overflow-hidden rounded-[24px] border border-slate-200/80 bg-white p-6 shadow-[0_22px_58px_-45px_rgba(8,18,37,.42)] transition duration-500 hover:-translate-y-1 hover:border-brand-500/25 hover:shadow-[0_30px_70px_-42px_rgba(8,18,37,.5)] dark:border-white/[.09] dark:bg-[#0b1118]", className)}>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_90%_8%,rgba(18,175,124,.12),transparent_38%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
       <div className="relative flex h-full flex-col">
-        <span className="icon-tile h-12 w-12 text-brand-600 transition duration-500 group-hover:-rotate-3 group-hover:scale-105 dark:text-brand-300"><Icon className="h-5 w-5" /></span>
-        <h3 className="mt-auto pt-20 text-[21px] font-black leading-tight tracking-[-.035em]">{title}</h3>
+        <span className="grid h-11 w-11 place-items-center rounded-xl border border-brand-500/15 bg-brand-500/[.08] text-brand-700 dark:text-brand-300"><Icon className="h-5 w-5" /></span>
+        <h3 className="mt-9 text-[20px] font-black leading-tight tracking-[-.035em] text-ink-950 dark:text-white">{title}</h3>
         <p className="mt-3 text-sm leading-6 text-slate-500 dark:text-slate-400">{copy}</p>
-        <span className="mt-7 block h-px w-full origin-left scale-x-[.16] bg-gradient-to-r from-brand-500/[.55] to-transparent transition-transform duration-700 group-hover:scale-x-100" />
+        <span className="mt-auto block pt-7"><span className="block h-px w-12 bg-brand-500/45 transition-all duration-500 group-hover:w-full" /></span>
       </div>
     </article>
   );

@@ -4,12 +4,13 @@
 
 :root {
   color-scheme: light;
-  --background: #f3f5ef;
-  --foreground: #16264a;
-  --muted: #667083;
-  --card: #fbfcf8;
-  --surface-muted: #f0f2ec;
+  --background: #f7faf8;
+  --foreground: #10213f;
+  --muted: #687487;
+  --card: #ffffff;
+  --surface-muted: #f1f6f3;
   --surface-strong: #ffffff;
+  --hero-green: #19e653;
   --border: rgba(26, 46, 89, 0.12);
   --hairline: rgba(26, 46, 89, 0.11);
   --brand: #12af7c;
@@ -20,12 +21,13 @@
 
 .dark {
   color-scheme: dark;
-  --background: #08152c;
-  --foreground: #f5f8f4;
-  --muted: #aeb8c8;
-  --card: #0d1c38;
-  --surface-muted: #0b1932;
-  --surface-strong: #10203d;
+  --background: #05080d;
+  --foreground: #f7faf8;
+  --muted: #aab5c5;
+  --card: #0a111a;
+  --surface-muted: #080e16;
+  --surface-strong: #0c141f;
+  --hero-green: #19e653;
   --border: rgba(255, 255, 255, 0.1);
   --hairline: rgba(255, 255, 255, 0.1);
   --shadow-color: 0 0 0;
@@ -49,7 +51,7 @@ body {
   min-width: 320px;
   overflow-x: hidden;
   background:
-    radial-gradient(circle at 84% -10%, rgba(18, 175, 124, 0.08), transparent 30rem),
+    radial-gradient(circle at 84% -10%, rgba(18, 175, 124, 0.055), transparent 30rem),
     var(--background);
   color: var(--foreground);
   font-family: var(--font-body);
@@ -115,7 +117,7 @@ select {
 
 @layer utilities {
   .section-shell {
-    @apply mx-auto w-full max-w-[1440px] px-5 sm:px-7 lg:px-10 xl:px-12;
+    @apply mx-auto w-full max-w-[1280px] px-4 sm:px-6 lg:px-8 xl:px-10;
   }
 
   .section-space {
@@ -442,3 +444,85 @@ select {
 
 ::view-transition-old(root),
 ::view-transition-new(root) { animation: none; }
+
+
+/* Home page visual language: light BillBring system + dark AI-style hero */
+.home-hero {
+  background:
+    radial-gradient(circle at 72% 12%, rgba(25, 230, 83, 0.08), transparent 34rem),
+    linear-gradient(180deg, #ffffff 0%, #f8fbf9 100%);
+}
+
+.dark .home-hero {
+  background:
+    radial-gradient(circle at 72% 12%, rgba(25, 230, 83, 0.10), transparent 34rem),
+    linear-gradient(180deg, #03060a 0%, #071018 100%);
+}
+
+.home-hero-grid {
+  opacity: 0.45;
+  background-image:
+    linear-gradient(rgba(16, 33, 63, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 33, 63, 0.035) 1px, transparent 1px);
+  background-size: 52px 52px;
+  mask-image: linear-gradient(to bottom, black, rgba(0,0,0,.45) 72%, transparent);
+}
+
+.dark .home-hero-grid {
+  opacity: 0.72;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+}
+
+.hero-metric-strip {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  overflow: hidden;
+  border: 1px solid rgba(16, 33, 63, 0.09);
+  border-radius: 1.35rem;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 28px 80px -58px rgba(16, 33, 63, 0.32);
+  backdrop-filter: blur(18px);
+}
+
+.dark .hero-metric-strip {
+  border-color: rgba(255, 255, 255, 0.10);
+  background: rgba(9, 16, 24, 0.74);
+  box-shadow: 0 28px 90px -60px rgba(0, 0, 0, 0.92);
+}
+
+.home-card,
+.service-tile,
+.home-feature-panel {
+  border: 1px solid rgba(16, 33, 63, 0.09);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 24px 68px -52px rgba(16, 33, 63, 0.28);
+}
+
+.dark .home-card,
+.dark .service-tile,
+.dark .home-feature-panel {
+  border-color: rgba(255, 255, 255, 0.09);
+  background: rgba(10, 17, 26, 0.96);
+  box-shadow: 0 26px 82px -58px rgba(0, 0, 0, 0.88);
+}
+
+.service-tile {
+  transition: transform 320ms cubic-bezier(.22,1,.36,1), border-color 250ms ease, box-shadow 320ms ease, background-color 250ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .home-card:hover,
+  .service-tile:hover {
+    transform: translateY(-4px);
+    border-color: rgba(18, 175, 124, 0.28);
+    box-shadow: 0 30px 72px -50px rgba(18, 175, 124, 0.24);
+  }
+}
+
+@media (min-width: 640px) {
+  .hero-metric-strip {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}

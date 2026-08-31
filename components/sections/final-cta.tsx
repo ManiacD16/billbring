@@ -1,20 +1,27 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 export function FinalCta() {
   return (
-    <section className="pb-10 pt-12 sm:pb-14 sm:pt-16">
+    <section className="pb-12 pt-14 sm:pb-16 sm:pt-20">
       <div className="section-shell">
-        <div className="relative overflow-hidden rounded-[2.5rem] bg-brand-500 px-6 py-12 text-ink-950 sm:px-10 sm:py-16 lg:px-14 lg:py-20" data-reveal>
-          <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full border-[34px] border-ink-950/[.06]" />
-          <div className="relative grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
+        <div className="relative overflow-hidden rounded-[30px] border border-white/[.08] bg-[#06101a] text-white shadow-[0_40px_100px_-58px_rgba(0,0,0,.8)]" data-reveal>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(18,175,124,.18),transparent_32%),linear-gradient(90deg,rgba(2,12,23,.98)_0%,rgba(2,12,23,.92)_48%,rgba(2,12,23,.28)_100%)]" />
+          <div className="absolute right-0 top-0 h-full w-full opacity-35 lg:w-[48%] lg:opacity-90">
+            <Image src="/images/home/6.png" alt="BillBring partnership and connected financial services" fill sizes="(max-width: 1024px) 100vw, 48vw" className="object-cover object-center" />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#06101a] via-[#06101a]/90 to-[#06101a]/25 lg:via-[#06101a]/75" />
+
+          <div className="relative grid min-h-[360px] items-center px-7 py-12 sm:px-10 lg:grid-cols-[.68fr_.32fr] lg:px-14 lg:py-16">
             <div>
-              <p className="text-[10px] font-bold uppercase tracking-[.17em]">Build with BillBring</p>
-              <h2 className="mt-5 max-w-[12ch] font-display text-[clamp(3rem,5.6vw,6rem)] font-semibold leading-[.85] tracking-[-.07em]">Bring your next financial journey into one connected platform.</h2>
-            </div>
-            <div className="flex flex-wrap gap-3 lg:justify-end">
-              <Link href="/partner" className="group inline-flex min-h-14 items-center gap-3 rounded-full bg-ink-950 px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-1">Become a Partner <ArrowUpRight className="h-4 w-4 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5" /></Link>
-              <Link href="/support" className="inline-flex min-h-14 items-center rounded-full border border-ink-950/[.18] px-6 py-3 text-sm font-semibold transition hover:bg-white/[.28]">Talk to our team</Link>
+              <p className="text-[10px] font-black uppercase tracking-[.17em] text-brand-300">Let&apos;s grow together</p>
+              <h2 className="mt-5 max-w-[13ch] font-display text-[clamp(2.8rem,5vw,5.4rem)] font-semibold leading-[.9] tracking-[-.065em]">One partnership. More ways to serve your customers.</h2>
+              <p className="mt-5 max-w-xl text-sm leading-7 text-slate-300">Connect payments, collections and financial services through one BillBring operating experience.</p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link href="/partner" className="group inline-flex min-h-12 items-center gap-3 rounded-xl bg-brand-500 px-5 py-3 text-sm font-black text-[#041008] transition hover:-translate-y-0.5 hover:brightness-105">Become a Partner <ArrowUpRight className="h-4 w-4" /></Link>
+                <Link href="/support" className="inline-flex min-h-12 items-center rounded-xl border border-white/[.14] bg-white/[.05] px-5 py-3 text-sm font-bold text-white transition hover:bg-white/[.09]">Talk to our team</Link>
+              </div>
             </div>
           </div>
         </div>

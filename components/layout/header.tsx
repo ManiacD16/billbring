@@ -1,12 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import {
-  ArrowUpRight,
-  ChevronDown,
-  Menu,
-  X,
-} from "lucide-react";
+import { ArrowRight, ChevronDown, Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -17,452 +12,128 @@ import { productGroups, products } from "@/data/products";
 import { cn } from "@/lib/cn";
 
 const nav = [
-  { label: "Solutions", href: "/solutions" },
-  { label: "Developers", href: "/developers" },
-  { label: "Company", href: "/company" },
-  { label: "Pricing", href: "/pricing" },
-  { label: "Support", href: "/support" },
-];
+  { label: "Home", href: "/" },
+  { label: "Retailer", href: "/solutions#retailers" },
+  { label: "Distributor", href: "/solutions#retailers" },
+  { label: "Merchant", href: "/solutions#merchants" },
+  { label: "About Us", href: "/company" },
+  { label: "Contact Us", href: "/support" },
+] as const;
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
 export function Header() {
   const pathname = usePathname();
-
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [productsOpen, setProductsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
 
   useEffect(() => {
     setMobileOpen(false);
-    setProductsOpen(false);
+    setServicesOpen(false);
   }, [pathname]);
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         setMobileOpen(false);
-        setProductsOpen(false);
+        setServicesOpen(false);
       }
     };
-
     window.addEventListener("keydown", onKeyDown);
-
-    return () => {
-      window.removeEventListener("keydown", onKeyDown);
-    };
+    return () => window.removeEventListener("keydown", onKeyDown);
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-ink-900/[.08] bg-[var(--background)] backdrop-blur-xl dark:border-white/[.08]">
-      <div className="section-shell flex min-h-[82px] items-center justify-between gap-5">
-        {/* Logo */}
-        <Link
-          href="/"
-          aria-label="BillBring home"
-          className="shrink-0 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
-        >
-          <Image
-            src="/brand/billbring-main.svg"
-            alt="BillBring"
-            width={170}
-            height={38}
-            priority
-            className="h-[34px] w-auto dark:hidden"
-          />
-
-          <Image
-            src="/brand/billbring-white.svg"
-            alt="BillBring"
-            width={170}
-            height={38}
-            priority
-            className="hidden h-[34px] w-auto dark:block"
-          />
+    <header className="sticky top-0 z-50 border-b border-ink-900/[.07] bg-white/[.88] backdrop-blur-xl dark:border-white/[.07] dark:bg-[#03060a]/[.88]">
+      <div className="section-shell flex min-h-[76px] items-center justify-between gap-4">
+        <Link href="/" aria-label="BillBring home" className="shrink-0 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500">
+          <Image src="/brand/billbring-main.svg" alt="BillBring" width={160} height={36} priority className="h-[32px] w-auto dark:hidden" />
+          <Image src="/brand/billbring-white.svg" alt="BillBring" width={160} height={36} priority className="hidden h-[32px] w-auto dark:block" />
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav
-          className="hidden items-center gap-1 lg:flex"
-          aria-label="Primary navigation"
-        >
-          {/* Products */}
-          <div
-            className="relative"
-            onMouseEnter={() => setProductsOpen(true)}
-            onMouseLeave={() => setProductsOpen(false)}
-          >
-            <button
-              type="button"
-              aria-expanded={productsOpen}
-              aria-haspopup="true"
-              onClick={() => setProductsOpen((open) => !open)}
-              className={cn(
-                "inline-flex h-11 items-center gap-1.5 rounded-full px-4 text-[13px] font-semibold transition",
-                "hover:bg-ink-900/[.045] dark:hover:bg-white/[.06]",
-                pathname.startsWith("/products") &&
-                  "bg-brand-500/[.10] text-brand-700 dark:text-brand-300",
-              )}
-            >
-              Products
+        <nav className="hidden items-center gap-0.5 xl:flex" aria-label="Primary navigation">
+          <Link href="/" className={cn("inline-flex h-10 items-center px-3 text-[12px] font-semibold transition hover:text-brand-600 dark:hover:text-brand-300", pathname === "/" && "text-brand-600 dark:text-hero-green")}>Home</Link>
 
-              <ChevronDown
-                className={cn(
-                  "h-3.5 w-3.5 transition-transform duration-300",
-                  productsOpen && "rotate-180",
-                )}
-              />
+          <div className="relative" onMouseEnter={() => setServicesOpen(true)} onMouseLeave={() => setServicesOpen(false)}>
+            <button type="button" onClick={() => setServicesOpen((open) => !open)} aria-expanded={servicesOpen} aria-haspopup="true" className={cn("inline-flex h-10 items-center gap-1 px-3 text-[12px] font-semibold transition hover:text-brand-600 dark:hover:text-brand-300", pathname.startsWith("/products") && "text-brand-600 dark:text-hero-green")}>
+              Services <ChevronDown className={cn("h-3.5 w-3.5 transition-transform", servicesOpen && "rotate-180")} />
             </button>
 
-            {/* Products Dropdown */}
             <AnimatePresence>
-              {productsOpen && (
-                <motion.div
-                  initial={{
-                    opacity: 0,
-                    y: 8,
-                    scale: 0.985,
-                  }}
-                  animate={{
-                    opacity: 1,
-                    y: 0,
-                    scale: 1,
-                  }}
-                  exit={{
-                    opacity: 0,
-                    y: 6,
-                    scale: 0.99,
-                  }}
-                  transition={{
-                    duration: 0.22,
-                    ease,
-                  }}
-                  className="
-                    absolute
-                    left-0
-                    top-full
-                    z-[100]
-                    pt-3
-                  "
-                >
-                  <div
-                    className="
-                      w-[760px]
-                      overflow-hidden
-                      rounded-[2rem]
-                      border
-                      border-ink-900/[.10]
-                      bg-[var(--surface-strong)]
-                      p-3
-                      shadow-[0_32px_90px_-38px_rgba(26,46,89,.42)]
-                      dark:border-white/[.10]
-                      xl:w-[900px]
-                      2xl:w-[1050px]
-                    "
-                  >
-                    <div className="grid grid-cols-2 gap-2 xl:grid-cols-4">
-                      {productGroups.map((group, groupIndex) => {
-                        const groupProducts = products.filter(
-                          (product) => product.group === group,
-                        );
-
-                        return (
-                          <div
-                            key={group}
-                            className="
-                              min-w-0
-                              rounded-[1.4rem]
-                              bg-[var(--surface-muted)]
-                              p-4
-                            "
-                          >
-                            <div className="flex min-h-[42px] items-start justify-between gap-3 border-b border-ink-900/[.08] pb-3 dark:border-white/[.08]">
-                              <p className="max-w-[145px] text-[10px] font-bold uppercase leading-[1.35] tracking-[.13em] text-[var(--muted)]">
-                                {group}
-                              </p>
-
-                              <span className="shrink-0 font-display text-lg font-semibold leading-none text-brand-500">
-                                {String(groupIndex + 1).padStart(2, "0")}
-                              </span>
-                            </div>
-
-                            <div className="mt-2">
-                              {groupProducts.map((product) => (
-                                <Link
-                                  key={product.slug}
-                                  href={`/products/${product.slug}`}
-                                  className="
-                                    group
-                                    flex
-                                    min-h-[38px]
-                                    items-center
-                                    justify-between
-                                    gap-3
-                                    rounded-xl
-                                    px-2.5
-                                    py-2
-                                    text-[12px]
-                                    font-semibold
-                                    leading-[1.35]
-                                    transition
-                                    hover:bg-white
-                                    dark:hover:bg-white/[.06]
-                                  "
-                                >
-                                  <span className="min-w-0">
-                                    {product.name}
-                                  </span>
-
-                                  <ArrowUpRight
-                                    className="
-                                      h-3.5
-                                      w-3.5
-                                      shrink-0
-                                      text-[var(--muted)]
-                                      opacity-0
-                                      transition-all
-                                      duration-200
-                                      group-hover:-translate-y-0.5
-                                      group-hover:translate-x-0.5
-                                      group-hover:opacity-100
-                                    "
-                                  />
-                                </Link>
-                              ))}
-                            </div>
+              {servicesOpen && (
+                <motion.div initial={{ opacity: 0, y: 8, scale: .99 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: 6, scale: .99 }} transition={{ duration: .2, ease }} className="absolute left-1/2 top-full z-[100] w-[820px] -translate-x-[28%] pt-3">
+                  <div className="rounded-[1.5rem] border border-ink-900/[.08] bg-white p-3 shadow-[0_30px_90px_-38px_rgba(16,33,63,.36)] dark:border-white/[.09] dark:bg-[#0a111a]">
+                    <div className="grid grid-cols-4 gap-2">
+                      {productGroups.map((group) => (
+                        <div key={group} className="rounded-[1.1rem] bg-[#f4f8f5] p-3.5 dark:bg-white/[.035]">
+                          <p className="border-b border-ink-900/[.07] pb-2.5 text-[9px] font-black uppercase tracking-[.13em] text-[var(--muted)] dark:border-white/[.07]">{group}</p>
+                          <div className="mt-2 space-y-0.5">
+                            {products.filter((product) => product.group === group).slice(0, 5).map((product) => (
+                              <Link key={product.slug} href={`/products/${product.slug}`} className="block rounded-lg px-2 py-2 text-[11px] font-semibold transition hover:bg-white hover:text-brand-600 dark:hover:bg-white/[.055] dark:hover:text-brand-300">{product.name}</Link>
+                            ))}
                           </div>
-                        );
-                      })}
+                        </div>
+                      ))}
                     </div>
-
-                    {/* Dropdown Footer */}
-                    <div className="mt-2 flex items-center justify-between gap-6 rounded-[1.2rem] bg-ink-950 px-5 py-4 text-white">
-                      <div>
-                        <p className="text-[10px] font-bold uppercase tracking-[.15em] text-brand-300">
-                          19 connected capabilities
-                        </p>
-
-                        <p className="mt-1 text-sm font-semibold text-slate-200">
-                          Explore the full BillBring financial service layer.
-                        </p>
-                      </div>
-
-                      <Link
-                        href="/products"
-                        className="
-                          group
-                          inline-flex
-                          shrink-0
-                          items-center
-                          gap-2
-                          rounded-full
-                          bg-white
-                          px-4
-                          py-2.5
-                          text-xs
-                          font-semibold
-                          text-ink-950
-                          transition
-                          hover:-translate-y-0.5
-                        "
-                      >
-                        View all products
-
-                        <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-                      </Link>
-                    </div>
+                    <Link href="/products" className="mt-2 flex items-center justify-between rounded-xl bg-ink-950 px-4 py-3 text-xs font-bold text-white dark:bg-black">
+                      View all BillBring services <ArrowRight className="h-4 w-4 text-brand-300" />
+                    </Link>
                   </div>
                 </motion.div>
               )}
             </AnimatePresence>
           </div>
 
-          {/* Other Navigation */}
-          {nav.map((item) => {
-            const active =
-              pathname === item.href ||
-              pathname.startsWith(`${item.href}/`);
-
+          {nav.slice(1).map((item) => {
+            const basePath = item.href.split("#")[0];
+            const active = basePath !== "/" && pathname === basePath;
             return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={cn(
-                  "inline-flex h-11 items-center rounded-full px-4 text-[13px] font-semibold transition",
-                  "hover:bg-ink-900/[.045] dark:hover:bg-white/[.06]",
-                  active &&
-                    "bg-brand-500/[.10] text-brand-700 dark:text-brand-300",
-                )}
-              >
-                {item.label}
-              </Link>
+              <Link key={`${item.label}-${item.href}`} href={item.href} className={cn("inline-flex h-10 items-center px-3 text-[12px] font-semibold transition hover:text-brand-600 dark:hover:text-brand-300", active && "text-brand-600 dark:text-hero-green")}>{item.label}</Link>
             );
           })}
         </nav>
 
-        {/* Desktop Actions */}
-        <div className="hidden items-center gap-2 lg:flex">
+        <div className="hidden items-center gap-2 xl:flex">
           <ThemeToggle />
-
-          <Link
-            href="/login"
-            className="inline-flex h-11 items-center rounded-full px-4 text-[13px] font-semibold transition hover:bg-ink-900/[.045] dark:hover:bg-white/[.06]"
-          >
-            Login
-          </Link>
-
-          <Link
-            href="/partner"
-            className="group inline-flex h-11 items-center gap-2 rounded-full bg-brand-500 px-5 text-[13px] font-semibold text-ink-950 transition hover:-translate-y-0.5 hover:bg-brand-400"
-          >
-            Become a Partner
-
-            <ArrowUpRight className="h-3.5 w-3.5 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-          </Link>
+          <Link href="/login" className="inline-flex h-10 items-center rounded-lg border border-brand-500/25 px-4 text-[12px] font-bold text-brand-700 transition hover:bg-brand-500/[.06] dark:text-brand-300">Login</Link>
+          <Link href="/partner" className="group inline-flex h-10 items-center gap-2 rounded-lg bg-brand-600 px-4 text-[12px] font-bold text-white shadow-[0_12px_30px_-18px_rgba(18,175,124,.7)] transition hover:-translate-y-0.5 hover:bg-brand-700 dark:bg-hero-green dark:text-[#041008] dark:hover:brightness-105">Become a Partner <ArrowRight className="h-3.5 w-3.5 transition group-hover:translate-x-0.5" /></Link>
         </div>
 
-        {/* Mobile Actions */}
-        <div className="flex items-center gap-2 lg:hidden">
+        <div className="flex items-center gap-2 xl:hidden">
           <ThemeToggle />
-
-          <button
-            type="button"
-            onClick={() => setMobileOpen((open) => !open)}
-            aria-expanded={mobileOpen}
-            aria-label={
-              mobileOpen ? "Close navigation" : "Open navigation"
-            }
-            className="grid h-11 w-11 place-items-center rounded-full border border-ink-900/[.10] bg-[var(--surface-strong)] dark:border-white/[.10]"
-          >
-            {mobileOpen ? (
-              <X className="h-4 w-4" />
-            ) : (
-              <Menu className="h-4 w-4" />
-            )}
+          <button type="button" onClick={() => setMobileOpen((open) => !open)} aria-expanded={mobileOpen} aria-label={mobileOpen ? "Close navigation" : "Open navigation"} className="grid h-11 w-11 place-items-center rounded-xl border border-ink-900/[.09] bg-white text-ink-950 dark:border-white/[.10] dark:bg-white/[.04] dark:text-white">
+            {mobileOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Navigation */}
       <AnimatePresence>
         {mobileOpen && (
-          <motion.div
-            initial={{
-              opacity: 0,
-              y: -8,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-            }}
-            exit={{
-              opacity: 0,
-              y: -8,
-            }}
-            transition={{
-              duration: 0.24,
-              ease,
-            }}
-            className="border-t border-ink-900/[.08] bg-[var(--surface-strong)] dark:border-white/[.08] lg:hidden"
-          >
-            <div className="section-shell max-h-[calc(100svh-82px)] overflow-y-auto py-5">
-              <div className="rounded-[1.6rem] bg-[var(--surface-muted)] p-3">
-                <button
-                  type="button"
-                  onClick={() =>
-                    setProductsOpen((open) => !open)
-                  }
-                  className="flex w-full items-center justify-between rounded-xl px-3 py-3 text-left text-base font-semibold"
-                >
-                  Products
+          <motion.div initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }} transition={{ duration: .22, ease }} className="border-t border-ink-900/[.07] bg-white dark:border-white/[.07] dark:bg-[#071018] xl:hidden">
+            <div className="section-shell max-h-[calc(100svh-76px)] overflow-y-auto py-5">
+              <button type="button" onClick={() => setServicesOpen((open) => !open)} className="flex w-full items-center justify-between rounded-xl bg-[var(--surface-muted)] px-4 py-3 text-left text-sm font-bold">
+                Services <ChevronDown className={cn("h-4 w-4 transition", servicesOpen && "rotate-180")} />
+              </button>
+              <AnimatePresence initial={false}>
+                {servicesOpen && (
+                  <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden">
+                    <div className="grid gap-2 py-2 sm:grid-cols-2">
+                      {productGroups.map((group) => (
+                        <div key={group} className="rounded-xl border border-ink-900/[.07] p-3 dark:border-white/[.07]">
+                          <p className="px-2 pb-2 text-[9px] font-black uppercase tracking-[.13em] text-[var(--muted)]">{group}</p>
+                          {products.filter((product) => product.group === group).slice(0, 5).map((product) => <Link key={product.slug} href={`/products/${product.slug}`} className="block rounded-lg px-2 py-2 text-xs font-semibold hover:bg-brand-500/[.08]">{product.name}</Link>)}
+                        </div>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
 
-                  <ChevronDown
-                    className={cn(
-                      "h-4 w-4 transition-transform",
-                      productsOpen && "rotate-180",
-                    )}
-                  />
-                </button>
-
-                <AnimatePresence initial={false}>
-                  {productsOpen && (
-                    <motion.div
-                      initial={{
-                        height: 0,
-                        opacity: 0,
-                      }}
-                      animate={{
-                        height: "auto",
-                        opacity: 1,
-                      }}
-                      exit={{
-                        height: 0,
-                        opacity: 0,
-                      }}
-                      className="overflow-hidden"
-                    >
-                      <div className="grid gap-2 px-1 pb-2 sm:grid-cols-2">
-                        {productGroups.map((group) => (
-                          <div
-                            key={group}
-                            className="rounded-xl bg-[var(--surface-strong)] p-3"
-                          >
-                            <p className="px-2 pb-2 text-[9px] font-bold uppercase tracking-[.14em] text-[var(--muted)]">
-                              {group}
-                            </p>
-
-                            {products
-                              .filter(
-                                (product) =>
-                                  product.group === group,
-                              )
-                              .map((product) => (
-                                <Link
-                                  key={product.slug}
-                                  href={`/products/${product.slug}`}
-                                  className="block rounded-lg px-2 py-2 text-xs font-semibold hover:bg-brand-500/[.08]"
-                                >
-                                  {product.name}
-                                </Link>
-                              ))}
-                          </div>
-                        ))}
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+              <div className="mt-3 grid gap-1 sm:grid-cols-2">
+                {nav.map((item) => <Link key={`${item.label}-${item.href}`} href={item.href} className="flex items-center justify-between rounded-xl px-4 py-3 text-sm font-semibold hover:bg-brand-500/[.08]">{item.label}<ArrowRight className="h-3.5 w-3.5 text-[var(--muted)]" /></Link>)}
+                <Link href="/login" className="flex items-center justify-between rounded-xl px-4 py-3 text-sm font-semibold hover:bg-brand-500/[.08]">Login <ArrowRight className="h-3.5 w-3.5 text-[var(--muted)]" /></Link>
               </div>
-
-              <div className="mt-3 space-y-1">
-                {nav.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="flex items-center justify-between rounded-xl px-3 py-3 text-base font-semibold hover:bg-brand-500/[.08]"
-                  >
-                    {item.label}
-
-                    <ArrowUpRight className="h-4 w-4 text-[var(--muted)]" />
-                  </Link>
-                ))}
-
-                <Link
-                  href="/login"
-                  className="flex items-center justify-between rounded-xl px-3 py-3 text-base font-semibold hover:bg-brand-500/[.08]"
-                >
-                  Login
-
-                  <ArrowUpRight className="h-4 w-4 text-[var(--muted)]" />
-                </Link>
-              </div>
-
-              <Link
-                href="/partner"
-                className="mt-4 flex min-h-14 items-center justify-between rounded-full bg-brand-500 px-5 text-sm font-semibold text-ink-950"
-              >
-                Become a Partner
-
-                <ArrowUpRight className="h-4 w-4" />
-              </Link>
+              <Link href="/partner" className="mt-4 flex min-h-12 items-center justify-between rounded-xl bg-brand-600 px-5 text-sm font-bold text-white dark:bg-hero-green dark:text-[#041008]">Become a Partner <ArrowRight className="h-4 w-4" /></Link>
             </div>
           </motion.div>
         )}

@@ -1,0 +1,77 @@
+export const siteImages = {
+  home: {
+    hero: "/images/site/1.png",
+    dashboard: "/images/site/2.png",
+    retailer: "/images/site/3.png",
+    merchant: "/images/site/4.png",
+    businessDashboard: "/images/site/5.png",
+    partnership: "/images/site/6.png",
+    security: "/images/site/7.png",
+  },
+  products: {
+    hero: "/images/site/11.png",
+    ecosystem: "/images/site/8.png",
+    gateway: "/images/site/12.png",
+    network: "/images/site/13.png",
+  },
+  solutions: {
+    hero: "/images/site/14.png",
+    retailer: "/images/site/9.png",
+    merchant: "/images/site/10.png",
+    acceptance: "/images/site/15.png",
+    pos: "/images/site/16.png",
+    delivery: "/images/site/17.png",
+  },
+  pricing: {
+    hero: "/images/site/18.png",
+    growth: "/images/site/19.png",
+    settlement: "/images/site/20.png",
+    dashboard: "/images/site/21.png",
+    intelligence: "/images/site/22.png",
+    savings: "/images/site/23.png",
+    focus: "/images/site/24.png",
+  },
+  company: {
+    hero: "/images/site/25.png",
+    operations: "/images/site/26.png",
+  },
+  partner: {
+    hero: "/images/site/6.png",
+    automation: "/images/site/27.png",
+    growth: "/images/site/31.png",
+  },
+  developers: {
+    hero: "/images/site/13.png",
+    automation: "/images/site/28.png",
+  },
+  support: {
+    hero: "/images/site/33.png",
+    support: "/images/site/30.png",
+    assistant: "/images/site/32.png",
+  },
+  login: {
+    visual: "/images/site/29.png",
+  },
+} as const;
+
+export const productImageBySlug: Record<string, string> = {
+  paybring: "/images/site/4.png",
+  "payment-gateway-collection": "/images/site/15.png",
+  bringpayout: "/images/site/20.png",
+  "vendor-merchant-payout": "/images/site/10.png",
+  bringremit: "/images/site/13.png",
+  remittance: "/images/site/13.png",
+  billbring: "/images/site/8.png",
+  "bbps-bill-payment-recharge": "/images/site/9.png",
+  bringaeps: "/images/site/10.png",
+  aeps: "/images/site/9.png",
+  bringdmt: "/images/site/14.png",
+  "domestic-money-transfer": "/images/site/14.png",
+  bringpos: "/images/site/16.png",
+  "pos-mpos": "/images/site/16.png",
+  bringwallet: "/images/site/11.png",
+  wallet: "/images/site/12.png",
+  bringtravel: "/images/site/17.png",
+  bringinsure: "/images/site/7.png",
+  bringcredit: "/images/site/19.png",
+};
