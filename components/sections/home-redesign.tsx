@@ -321,13 +321,23 @@ function ServicePictogram({ type, tone }: { type: ServiceIconName; tone: Service
         </svg>
       );
     }
-    if (type === "travel") {
-      return (
-        <svg viewBox="0 0 40 40" aria-hidden="true" className={common}>
-          <path d="m5.5 22.8 10.7-2.8 9-12.2c1.8-2.4 4-3 5.3-1.8 1.3 1.2.9 3.6-1.4 5.5L18.4 20l6.8 3.1 4.2-3.4 2 1.8-3.2 5.2 3.3 4.3-1.8 1.8-4.7-3.5-4 3.5-2.2-1.9 2.8-4.5-5.2-4.1-8.2 4-2.7-2.3Z" fill="none" stroke="currentColor" strokeWidth="2.1" strokeLinejoin="round" strokeLinecap="round" />
-        </svg>
-      );
-    }
+if (type === "travel") {
+  return (
+    <svg viewBox="0 0 40 40" aria-hidden="true" className={common}>
+      <path
+        d="M20 3
+           L17 13 L4 20 L4 23 L17 21
+           L17 30 L13 34 L14 36 L20 34 L26 36 L27 34 L23 30
+           L23 21 L36 23 L36 20 L23 13 Z"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinejoin="round"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
     return (
       <svg viewBox="0 0 40 40" aria-hidden="true" className={common}>
         <path d="M20 4.8 31 9v8.9c0 7.7-4.4 13.8-11 17.3C13.4 31.7 9 25.6 9 17.9V9l11-4.2Z" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinejoin="round" />
