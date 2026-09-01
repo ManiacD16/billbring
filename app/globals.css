@@ -446,50 +446,39 @@ select {
 ::view-transition-new(root) { animation: none; }
 
 
-/* Home page visual language: light BillBring system + dark AI-style hero */
+/* Home page visual language: dark neon-green reference hero + light content system */
 .home-hero {
   background:
-    radial-gradient(circle at 72% 12%, rgba(25, 230, 83, 0.08), transparent 34rem),
-    linear-gradient(180deg, #ffffff 0%, #f8fbf9 100%);
-}
-
-.dark .home-hero {
-  background:
-    radial-gradient(circle at 72% 12%, rgba(25, 230, 83, 0.10), transparent 34rem),
-    linear-gradient(180deg, #03060a 0%, #071018 100%);
+    radial-gradient(circle at 70% 22%, rgba(25, 230, 83, 0.11), transparent 31rem),
+    radial-gradient(circle at 92% 72%, rgba(15, 90, 97, 0.13), transparent 32rem),
+    linear-gradient(115deg, #020407 0%, #030609 50%, #04100d 100%);
 }
 
 .home-hero-grid {
-  opacity: 0.45;
+  opacity: 0.34;
   background-image:
-    linear-gradient(rgba(16, 33, 63, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(16, 33, 63, 0.035) 1px, transparent 1px);
-  background-size: 52px 52px;
-  mask-image: linear-gradient(to bottom, black, rgba(0,0,0,.45) 72%, transparent);
+    linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+  background-size: 54px 54px;
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.32) 70%, transparent);
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.32) 70%, transparent);
 }
 
-.dark .home-hero-grid {
-  opacity: 0.72;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+.hero-product-visual {
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.64) 7%, #000 18%, #000 94%, rgba(0,0,0,.90) 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.64) 7%, #000 18%, #000 94%, rgba(0,0,0,.90) 100%);
 }
 
 .hero-metric-strip {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   overflow: hidden;
-  border: 1px solid rgba(16, 33, 63, 0.09);
-  border-radius: 1.35rem;
-  background: rgba(255, 255, 255, 0.72);
-  box-shadow: 0 28px 80px -58px rgba(16, 33, 63, 0.32);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1.2rem;
+  background:
+    linear-gradient(90deg, rgba(5, 21, 17, 0.90), rgba(15, 25, 30, 0.82), rgba(5, 18, 17, 0.88));
+  box-shadow: 0 26px 90px -58px rgba(25, 230, 83, 0.45);
   backdrop-filter: blur(18px);
-}
-
-.dark .hero-metric-strip {
-  border-color: rgba(255, 255, 255, 0.10);
-  background: rgba(9, 16, 24, 0.74);
-  box-shadow: 0 28px 90px -60px rgba(0, 0, 0, 0.92);
 }
 
 .home-card,
@@ -524,5 +513,78 @@ select {
 @media (min-width: 640px) {
   .hero-metric-strip {
     grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1023px) {
+  .hero-product-visual {
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 90%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 0%, #000 90%, transparent 100%);
+  }
+}
+
+
+/* Reference homepage: light BillBring ecosystem design */
+.home-reference-page {
+  --home-navy: #10213f;
+  --home-green: #11995a;
+  --home-blue: #2465d8;
+}
+
+.home-reference-hero {
+  background:
+    radial-gradient(circle at 80% 18%, rgba(17,153,90,.055), transparent 28rem),
+    linear-gradient(180deg, #ffffff 0%, #fbfefd 100%);
+}
+
+.dark .home-reference-hero {
+  background:
+    radial-gradient(circle at 80% 18%, rgba(84,227,148,.085), transparent 28rem),
+    linear-gradient(180deg, #06101a 0%, #07141f 100%);
+}
+
+.home-city-lines {
+  background-image:
+    linear-gradient(to top, rgba(17,153,90,.07), transparent 64%),
+    repeating-linear-gradient(90deg, transparent 0 29px, rgba(17,153,90,.055) 30px 31px),
+    repeating-linear-gradient(0deg, transparent 0 23px, rgba(17,153,90,.035) 24px 25px);
+  -webkit-mask-image: linear-gradient(to top, #000, transparent 88%);
+  mask-image: linear-gradient(to top, #000, transparent 88%);
+}
+
+.hero-dashboard-vignette {
+  filter: drop-shadow(0 28px 38px rgba(16,33,63,.12));
+  -webkit-mask-image: radial-gradient(ellipse at 55% 50%, #000 60%, rgba(0,0,0,.9) 74%, transparent 98%);
+  mask-image: radial-gradient(ellipse at 55% 50%, #000 60%, rgba(0,0,0,.9) 74%, transparent 98%);
+}
+
+.dark .hero-dashboard-vignette {
+  filter: drop-shadow(0 32px 42px rgba(0,0,0,.45));
+}
+
+.audience-image {
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 18%, #000 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 18%, #000 100%);
+}
+
+.dashboard-feature-image {
+  border-radius: 14px;
+  box-shadow: 0 24px 55px -38px rgba(16,33,63,.42);
+}
+
+.dark .dashboard-feature-image {
+  box-shadow: 0 24px 55px -38px rgba(0,0,0,.8);
+}
+
+@media (max-width: 639px) {
+  .audience-image {
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 13%, #000 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, #000 13%, #000 100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-reference-page * {
+    scroll-behavior: auto !important;
   }
 }
