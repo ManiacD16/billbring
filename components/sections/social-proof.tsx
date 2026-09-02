@@ -12,7 +12,7 @@ export function SocialProof() {
   return (
     <section className="section-transition py-28 sm:py-36 lg:py-40">
       <div className="section-shell">
-        <SectionHeading eyebrow="Designed for real operations" title={<>Every team sees the <span className="text-brand-500">next move.</span></>} copy="BillBring brings customer-facing services, engineering integrations and operational states into one shared product language." align="center" />
+        <SectionHeading eyebrow="Designed for real operations" title={<>Every team sees the <span className="text-brand-500">next move.</span></>} copy="billbring brings customer-facing services, engineering integrations and operational states into one shared product language." align="center" />
         <div className="mt-16 grid gap-5 lg:grid-cols-[1.05fr_.95fr]">
           <article data-reveal="left" className="noise relative overflow-hidden rounded-[36px] bg-ink-950 p-8 text-white shadow-lift sm:p-10 lg:p-12">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_82%_18%,rgba(18,175,124,.2),transparent_32%)]" />
@@ -20,7 +20,7 @@ export function SocialProof() {
             <div className="relative max-w-2xl">
               <p className="text-[10px] font-black uppercase tracking-[.18em] text-brand-300">Operational confidence</p>
               <h3 className="mt-5 text-[clamp(2.3rem,4vw,4rem)] font-black leading-[.98] tracking-[-.055em]">Clarity is a feature when money is moving.</h3>
-              <p className="mt-6 max-w-xl text-sm leading-7 text-slate-300">A financial interface should make state, ownership and the next action obvious. BillBring&apos;s design system is shaped around that operating reality.</p>
+              <p className="mt-6 max-w-xl text-sm leading-7 text-slate-300">A financial interface should make state, ownership and the next action obvious. billbring&apos;s design system is shaped around that operating reality.</p>
               <div className="mt-8 grid gap-3 sm:grid-cols-2">{["Clear transaction states","Understandable handoffs","Traceable outcomes","Consistent interaction patterns"].map((item)=><div key={item} className="flex items-center gap-2 rounded-2xl border border-white/[.10] bg-white/[.04] p-3 text-xs font-bold text-slate-300"><CheckCircle2 className="h-4 w-4 text-brand-400" />{item}</div>)}</div>
             </div>
           </article>

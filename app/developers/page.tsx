@@ -8,7 +8,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 
 export const metadata: Metadata = {
   title: "Developers",
-  description: "Explore the BillBring API-first developer experience.",
+  description: "Explore the billbring API-first developer experience.",
 };
 
 const developerFeatures = [
@@ -26,9 +26,9 @@ export default function DevelopersPage() {
       <InternalHero
         eyebrow="Developers"
         title={<>Build financial experiences without <span className="text-brand-500">the visual complexity.</span></>}
-        copy="The BillBring developer experience is designed around clear APIs, predictable events and implementation patterns that are easy to reason about."
+        copy="The billbring developer experience is designed around clear APIs, predictable events and implementation patterns that are easy to reason about."
         image="/images/home/13.png"
-        imageAlt="BillBring API-connected financial services platform"
+        imageAlt="billbring API-connected financial services platform"
         points={["API-first", "Realtime events", "Secure integration"]}
       />
       <ApiSection />
@@ -41,7 +41,7 @@ export default function DevelopersPage() {
             <p className="mt-5 max-w-xl text-sm leading-7 text-slate-500 dark:text-slate-400">Developers connect to the same payment, collection and operational surfaces that business teams use. The visual and API language should reinforce each other.</p>
           </div>
           <div data-reveal="right" className="overflow-hidden rounded-[28px] border border-slate-200/80 bg-white p-3 shadow-[0_26px_70px_-48px_rgba(8,18,37,.5)] dark:border-white/[.09] dark:bg-[#0b1118]">
-            <div className="relative aspect-[16/10] overflow-hidden rounded-[20px] bg-black"><Image src="/images/home/12.png" alt="BillBring digital payments and integration platform" fill sizes="(max-width: 1024px) 100vw, 48vw" className="object-cover" /></div>
+            <div className="relative aspect-[16/10] overflow-hidden rounded-[20px] bg-black"><Image src="/images/home/12.png" alt="billbring digital payments and integration platform" fill sizes="(max-width: 1024px) 100vw, 48vw" className="object-cover" /></div>
           </div>
         </div>
       </section>

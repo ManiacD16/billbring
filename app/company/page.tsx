@@ -7,7 +7,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 
 export const metadata: Metadata = {
   title: "Company",
-  description: "About BillBring and the product principles behind the platform.",
+  description: "About billbring and the product principles behind the platform.",
 };
 
 export default function CompanyPage() {
@@ -16,9 +16,9 @@ export default function CompanyPage() {
       <InternalHero
         eyebrow="Company"
         title={<>Building a clearer financial <span className="text-brand-500">operating experience.</span></>}
-        copy="BillBring brings payments, bills, collections, payouts and financial services together through one consistent product language."
+        copy="billbring brings payments, bills, collections, payouts and financial services together through one consistent product language."
         image="/images/home/8.png"
-        imageAlt="BillBring financial ecosystem across retailers, merchants and digital payments"
+        imageAlt="billbring financial ecosystem across retailers, merchants and digital payments"
         points={["One ecosystem", "Partner-led growth", "Trust-first operations"]}
       />
 
@@ -37,16 +37,16 @@ export default function CompanyPage() {
       <section className="border-y border-slate-200/70 bg-[#f7fbf9] py-20 dark:border-white/[.08] dark:bg-white/[.015] sm:py-28">
         <div className="section-shell grid gap-6 lg:grid-cols-2">
           <article className="overflow-hidden rounded-[28px] border border-slate-200/80 bg-white dark:border-white/[.09] dark:bg-[#0b1118]" data-reveal="left">
-            <div className="relative aspect-[16/9]"><Image src="/images/home/6.png" alt="BillBring business partnership" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" /></div>
-            <div className="p-7"><p className="text-[10px] font-black uppercase tracking-[.16em] text-brand-600 dark:text-brand-300">Partnership at the center</p><h2 className="mt-3 text-3xl font-black tracking-[-.045em]">Grow through connected distribution.</h2><p className="mt-4 text-sm leading-7 text-slate-500 dark:text-slate-400">BillBring is designed around the people and businesses who put financial services into customers&apos; hands.</p></div>
+            <div className="relative aspect-[16/9]"><Image src="/images/home/6.png" alt="billbring business partnership" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" /></div>
+            <div className="p-7"><p className="text-[10px] font-black uppercase tracking-[.16em] text-brand-600 dark:text-brand-300">Partnership at the center</p><h2 className="mt-3 text-3xl font-black tracking-[-.045em]">Grow through connected distribution.</h2><p className="mt-4 text-sm leading-7 text-slate-500 dark:text-slate-400">billbring is designed around the people and businesses who put financial services into customers&apos; hands.</p></div>
           </article>
           <article className="overflow-hidden rounded-[28px] border border-slate-200/80 bg-white dark:border-white/[.09] dark:bg-[#0b1118]" data-reveal="right">
-            <div className="relative aspect-[16/9] bg-black"><Image src="/images/home/7.png" alt="BillBring security and trust" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-contain" /></div>
+            <div className="relative aspect-[16/9] bg-black"><Image src="/images/home/7.png" alt="billbring security and trust" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-contain" /></div>
             <div className="p-7"><p className="text-[10px] font-black uppercase tracking-[.16em] text-brand-600 dark:text-brand-300">Trust by design</p><h2 className="mt-3 text-3xl font-black tracking-[-.045em]">Security is part of the product language.</h2><p className="mt-4 text-sm leading-7 text-slate-500 dark:text-slate-400">Permissions, confirmations, transparent states and protected access should feel consistent everywhere.</p></div>
           </article>
           <article className="overflow-hidden rounded-[28px] border border-slate-200/80 bg-white dark:border-white/[.09] dark:bg-[#0b1118] lg:col-span-2" data-reveal="scale">
             <div className="grid items-center lg:grid-cols-[1.08fr_.92fr]">
-              <div className="relative min-h-[260px] lg:min-h-[360px]"><Image src="/images/home/24.png" alt="BillBring helping businesses focus on growth" fill sizes="(max-width: 1024px) 100vw, 55vw" className="object-cover" /></div>
+              <div className="relative min-h-[260px] lg:min-h-[360px]"><Image src="/images/home/24.png" alt="billbring helping businesses focus on growth" fill sizes="(max-width: 1024px) 100vw, 55vw" className="object-cover" /></div>
               <div className="p-7 sm:p-9 lg:p-10"><p className="text-[10px] font-black uppercase tracking-[.16em] text-brand-600 dark:text-brand-300">Built for growth</p><h2 className="mt-3 text-3xl font-black tracking-[-.045em]">Let the platform absorb the operational noise.</h2><p className="mt-4 text-sm leading-7 text-slate-500 dark:text-slate-400">The company vision is simple: make financial operations feel less fragmented so partners can spend more time serving customers and growing the business.</p></div>
             </div>
           </article>
@@ -61,7 +61,7 @@ export default function CompanyPage() {
               <div>
                 <p className="text-[10px] font-black uppercase tracking-[.18em] text-brand-300">Governance-ready structure</p>
                 <h2 className="mt-5 text-[clamp(2.4rem,4.5vw,4.6rem)] font-black leading-[.96] tracking-[-.06em]">Trust deserves a clear place in the product.</h2>
-                <p className="mt-5 max-w-xl text-sm leading-7 text-slate-300">Policy and compliance content should be easy to locate, version and understand. BillBring&apos;s information architecture reserves a clear home for approved company disclosures.</p>
+                <p className="mt-5 max-w-xl text-sm leading-7 text-slate-300">Policy and compliance content should be easy to locate, version and understand. billbring&apos;s information architecture reserves a clear home for approved company disclosures.</p>
               </div>
               <div className="grid gap-3 sm:grid-cols-3">
                 <article id="privacy" className="scroll-mt-32 rounded-[20px] border border-white/[.10] bg-white/[.045] p-5"><ShieldCheck className="h-5 w-5 text-brand-400"/><h3 className="mt-5 text-sm font-black">Privacy & data</h3><p className="mt-2 text-xs leading-5 text-slate-400">A dedicated location for approved privacy and data-handling documentation.</p></article>

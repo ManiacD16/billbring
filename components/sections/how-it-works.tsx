@@ -8,7 +8,7 @@ const steps = [
   { icon: CircleUserRound, title: "Create account", copy: "Start with a simple business or partner onboarding journey." },
   { icon: BadgeCheck, title: "Complete verification", copy: "Submit the information required for your selected services." },
   { icon: SlidersHorizontal, title: "Activate services", copy: "Choose the financial products your business wants to offer." },
-  { icon: Rocket, title: "Start transacting", copy: "Go live and operate through one consistent BillBring experience." },
+  { icon: Rocket, title: "Start transacting", copy: "Go live and operate through one consistent billbring experience." },
 ];
 
 export function HowItWorks() {

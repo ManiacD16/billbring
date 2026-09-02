@@ -21,25 +21,25 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.billbring.com"),
   title: {
-    default: "BillBring — Bringing Bills & Payments Together, Seamlessly.",
-    template: "%s | BillBring",
+    default: "billbring — Bringing Bills & Payments Together, Seamlessly.",
+    template: "%s | billbring",
   },
   description: "A unified platform to manage bill payments, collections, recharges and digital payments — all in one place.",
-  keywords: ["BillBring", "payments", "BBPS", "AEPS", "DMT", "payment gateway", "payouts", "fintech", "digital payments"],
+  keywords: ["billbring", "payments", "BBPS", "AEPS", "DMT", "payment gateway", "payouts", "fintech", "digital payments"],
   openGraph: {
-    title: "BillBring — Bringing Bills & Payments Together, Seamlessly.",
+    title: "billbring — Bringing Bills & Payments Together, Seamlessly.",
     description: "A unified platform for bill payments, collections, recharges and digital payments.",
     type: "website",
-    siteName: "BillBring",
+    siteName: "billbring",
   },
-  twitter: { card: "summary_large_image", title: "BillBring", description: "Bringing Bills & Payments Together, Seamlessly." },
+  twitter: { card: "summary_large_image", title: "billbring", description: "Bringing Bills & Payments Together, Seamlessly." },
   robots: { index: true, follow: true },
 };
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "BillBring",
+  name: "billbring",
   url: "https://www.billbring.com",
   logo: "https://www.billbring.com/brand/billbring-main.svg",
   description: "A unified platform to manage bill payments, collections, recharges and digital payments.",

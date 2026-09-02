@@ -6,7 +6,7 @@ import { ButtonLink } from "@/components/ui/button-link";
 
 export const metadata: Metadata = {
   title: "Pricing",
-  description: "Talk to BillBring about pricing for your products and transaction volumes.",
+  description: "Talk to billbring about pricing for your products and transaction volumes.",
 };
 
 const pricingInputs = [
@@ -24,9 +24,9 @@ export default function PricingPage() {
       <InternalHero
         eyebrow="Pricing"
         title={<>Pricing built around what <span className="text-brand-500">you actually use.</span></>}
-        copy="BillBring spans multiple financial products and operating models. Your commercial plan can reflect the services, transaction volumes and support model your business requires."
+        copy="billbring spans multiple financial products and operating models. Your commercial plan can reflect the services, transaction volumes and support model your business requires."
         image="/images/home/31.png"
-        imageAlt="BillBring business team reviewing expense and financial insights"
+        imageAlt="billbring business team reviewing expense and financial insights"
         points={["Usage-aligned", "Business-specific", "Scale-ready"]}
       />
 
@@ -34,7 +34,7 @@ export default function PricingPage() {
         <div className="section-shell">
           <div className="grid overflow-hidden rounded-[30px] border border-slate-200/80 bg-white shadow-[0_32px_82px_-54px_rgba(8,18,37,.5)] dark:border-white/[.09] dark:bg-[#0b1118] lg:grid-cols-[.9fr_1.1fr]" data-reveal="scale">
             <div className="relative min-h-[380px] overflow-hidden bg-[#06101a] lg:min-h-[560px]">
-              <Image src="/images/home/28.png" alt="BillBring AI-powered financial control" fill sizes="(max-width: 1024px) 100vw, 45vw" className="object-cover" />
+              <Image src="/images/home/28.png" alt="billbring AI-powered financial control" fill sizes="(max-width: 1024px) 100vw, 45vw" className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#06101a]/95 via-[#06101a]/25 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-7 text-white sm:p-9">
                 <p className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[.17em] text-brand-300"><Sparkles className="h-3.5 w-3.5" /> Commercial model</p>
@@ -45,7 +45,7 @@ export default function PricingPage() {
 
             <div className="p-7 sm:p-10 lg:p-12">
               <p className="text-[10px] font-black uppercase tracking-[.17em] text-brand-600 dark:text-brand-300">Custom commercial plan</p>
-              <h3 className="mt-4 text-4xl font-black tracking-[-.05em] text-ink-950 dark:text-white">Let&apos;s size your BillBring stack.</h3>
+              <h3 className="mt-4 text-4xl font-black tracking-[-.05em] text-ink-950 dark:text-white">Let&apos;s size your billbring stack.</h3>
               <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-500 dark:text-slate-400">A useful pricing conversation starts with context. These inputs help define the right commercial model.</p>
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
                 {pricingInputs.map((item) => (

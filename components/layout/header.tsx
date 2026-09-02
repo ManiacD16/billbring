@@ -41,7 +41,7 @@ const productMenu = [
   {
     group: "Payments & Merchant",
     items: [
-      { name: "BillBring", description: "BBPS / Bill Payment / Recharge", href: "/products/billbring" },
+      { name: "billbring", description: "BBPS / Bill Payment / Recharge", href: "/products/billbring" },
       { name: "BringPOS", description: "POS / mPOS", href: "/products/bringpos" },
     ],
   },
@@ -94,14 +94,14 @@ export function Header() {
       <div className="mx-auto flex min-h-[72px] w-full max-w-[1480px] items-center justify-between gap-4 px-4 sm:min-h-[80px] sm:px-6 lg:px-8 xl:min-h-[86px]">
         <Link
           href="/"
-          aria-label="BillBring home"
+          aria-label="billbring home"
           className="shrink-0 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
         >
           <span className="block">
             <span className="flex items-end">
               <Image
                 src="/brand/billbring-main.svg"
-                alt="BillBring"
+                alt="billbring"
                 width={170}
                 height={38}
                 priority
@@ -109,7 +109,7 @@ export function Header() {
               />
               <Image
                 src="/brand/billbring-home.svg"
-                alt="BillBring"
+                alt="billbring"
                 width={170}
                 height={38}
                 priority
@@ -164,7 +164,7 @@ export function Header() {
                     <div className="flex items-center justify-between border-b border-[#17305a]/[.08] px-6 py-4 dark:border-white/[.08]">
                       <div>
                         <p className="text-[10px] font-black uppercase tracking-[.22em] text-[#0e9a55] dark:text-[#54e394]">Products</p>
-                        <p className="mt-1 text-[12px] text-[#66748c] dark:text-white/62">One connected BillBring product ecosystem.</p>
+                        <p className="mt-1 text-[12px] text-[#66748c] dark:text-white/62">One connected billbring product ecosystem.</p>
                       </div>
                       <Link href="/products" className="group inline-flex items-center gap-2 text-[12px] font-bold text-[#142544] transition hover:text-[#0e9a55] dark:text-white/80 dark:hover:text-[#54e394]">
                         View all products <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />

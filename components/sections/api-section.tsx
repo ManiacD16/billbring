@@ -41,7 +41,7 @@ export function ApiSection() {
               <motion.div whileHover={{ y: -4 }} transition={{ duration: .45 }} className="relative overflow-hidden rounded-[28px] border border-white/[.10] bg-[#06101f]/[.92] shadow-2xl">
                 <div className="flex items-center justify-between border-b border-white/[.10] px-5 py-4">
                   <div className="flex items-center gap-2"><span className="h-2.5 w-2.5 rounded-full bg-white/[.22]"/><span className="h-2.5 w-2.5 rounded-full bg-white/[.22]"/><span className="h-2.5 w-2.5 rounded-full bg-brand-500"/></div>
-                  <div className="flex items-center gap-2 text-[9px] font-bold uppercase tracking-[.12em] text-slate-500"><TerminalSquare className="h-3.5 w-3.5" /> BillBring API · sample request</div>
+                  <div className="flex items-center gap-2 text-[9px] font-bold uppercase tracking-[.12em] text-slate-500"><TerminalSquare className="h-3.5 w-3.5" /> billbring API · sample request</div>
                 </div>
 
                 <div className="grid min-h-[390px] lg:grid-cols-[1fr_190px]">
@@ -60,7 +60,7 @@ export function ApiSection() {
                   <div className="p-5 sm:p-6">
                     <p className="text-[9px] font-black uppercase tracking-[.14em] text-slate-500">Request flow</p>
                     <div className="mt-6 space-y-5">
-                      {["Your product","BillBring API","Payment rail","Success event"].map((item,index) => <div key={item} className="relative flex items-center gap-3"><span className={`grid h-8 w-8 place-items-center rounded-full border text-[10px] font-black ${index === 3 ? 'border-brand-400/[.30] bg-brand-500/[.15] text-brand-300' : 'border-white/[.10] bg-white/[.04] text-slate-400'}`}>{index+1}</span><span className="text-[11px] font-bold text-slate-300">{item}</span>{index < 3 && <span className="absolute left-4 top-8 h-5 w-px bg-white/[.10]" />}</div>)}
+                      {["Your product","billbring API","Payment rail","Success event"].map((item,index) => <div key={item} className="relative flex items-center gap-3"><span className={`grid h-8 w-8 place-items-center rounded-full border text-[10px] font-black ${index === 3 ? 'border-brand-400/[.30] bg-brand-500/[.15] text-brand-300' : 'border-white/[.10] bg-white/[.04] text-slate-400'}`}>{index+1}</span><span className="text-[11px] font-bold text-slate-300">{item}</span>{index < 3 && <span className="absolute left-4 top-8 h-5 w-px bg-white/[.10]" />}</div>)}
                     </div>
                   </div>
                 </div>

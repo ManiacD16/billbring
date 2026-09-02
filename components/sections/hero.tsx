@@ -50,7 +50,7 @@ function DashboardHeroVisual() {
           <aside className="hidden w-[23%] rounded-[21px] bg-ink-950 p-4 text-white sm:block">
             <div className="mb-6 flex items-center gap-2">
               <div className="grid h-8 w-8 place-items-center rounded-xl bg-brand-500/[.15]"><WalletCards className="h-4 w-4 text-brand-400" /></div>
-              <span className="text-sm font-extrabold">BillBring</span>
+              <span className="text-sm font-extrabold">billbring</span>
             </div>
             {['Overview','Transactions','Settlements','Services','Payouts','Reports'].map((item, i) => (
               <div key={item} className={`mb-1.5 flex items-center justify-between rounded-lg px-2.5 py-2 text-[9px] font-semibold ${i === 0 ? 'bg-brand-600 text-white' : 'text-slate-400'}`}>
@@ -148,7 +148,7 @@ export function Hero() {
           <motion.a initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: .62 }} href="/developers" className="group mt-7 inline-flex items-center gap-2 text-sm font-extrabold text-brand-700 dark:text-brand-400"><span className="link-underline">Explore APIs</span><ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" /></motion.a>
         </div>
 
-        <motion.div initial={{ opacity: 0, scale: .975, y: 18 }} animate={{ opacity: 1, scale: 1, y: 0 }} transition={{ delay: .22, duration: .88, ease }}><p className="sr-only">Illustrative BillBring dashboard preview showing payments, services and operational visibility.</p><DashboardHeroVisual /></motion.div>
+        <motion.div initial={{ opacity: 0, scale: .975, y: 18 }} animate={{ opacity: 1, scale: 1, y: 0 }} transition={{ delay: .22, duration: .88, ease }}><p className="sr-only">Illustrative billbring dashboard preview showing payments, services and operational visibility.</p><DashboardHeroVisual /></motion.div>
       </div>
 
       <motion.a href="#products" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.1 }} className="absolute bottom-5 left-1/2 hidden -translate-x-1/2 items-center gap-2 text-[9px] font-black uppercase tracking-[.18em] text-slate-400 lg:flex">

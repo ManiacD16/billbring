@@ -5,7 +5,7 @@ import { InternalHero } from "@/components/ui/internal-hero";
 
 export const metadata: Metadata = {
   title: "Become a Partner",
-  description: "Start a BillBring partnership conversation.",
+  description: "Start a billbring partnership conversation.",
 };
 
 const fitSignals = [
@@ -29,9 +29,9 @@ export default function PartnerPage() {
       <InternalHero
         eyebrow="Partnership"
         title={<>Bring more financial services to <span className="text-brand-500">your customers.</span></>}
-        copy="Tell BillBring about your business, operating model and the products you want to offer. The right partnership conversation starts with context."
+        copy="Tell billbring about your business, operating model and the products you want to offer. The right partnership conversation starts with context."
         image="/images/home/6.png"
-        imageAlt="BillBring business partnership"
+        imageAlt="billbring business partnership"
         points={["Retail & distribution", "Merchant growth", "API partnerships"]}
         cta={false}
       />
@@ -39,7 +39,7 @@ export default function PartnerPage() {
       <section className="py-20 sm:py-28 lg:py-32">
         <div className="section-shell grid gap-6 lg:grid-cols-[.78fr_1.22fr]">
           <div data-reveal="left" className="overflow-hidden rounded-[30px] border border-slate-200/80 bg-white shadow-[0_28px_74px_-52px_rgba(8,18,37,.5)] dark:border-white/[.09] dark:bg-[#0b1118]">
-            <div className="relative aspect-[16/10] overflow-hidden bg-black"><Image src="/images/home/8.png" alt="BillBring retailer, merchant and payments ecosystem" fill sizes="(max-width: 1024px) 100vw, 42vw" className="object-cover" /></div>
+            <div className="relative aspect-[16/10] overflow-hidden bg-black"><Image src="/images/home/8.png" alt="billbring retailer, merchant and payments ecosystem" fill sizes="(max-width: 1024px) 100vw, 42vw" className="object-cover" /></div>
             <div className="p-7 sm:p-8">
               <p className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[.17em] text-brand-600 dark:text-brand-300"><Sparkles className="h-3.5 w-3.5" /> Partnership fit</p>
               <h2 className="mt-4 text-3xl font-black leading-[1] tracking-[-.05em] text-ink-950 dark:text-white">A better first conversation starts with context.</h2>
@@ -62,7 +62,7 @@ export default function PartnerPage() {
               ))}
             </div>
             <label className="mt-5 block">
-              <span className="mb-2.5 block text-xs font-black">What do you want to build with BillBring?</span>
+              <span className="mb-2.5 block text-xs font-black">What do you want to build with billbring?</span>
               <textarea name="message" rows={6} required className="w-full resize-none rounded-xl border border-slate-200 bg-[#f7fbf9] p-4 text-sm outline-none transition duration-300 placeholder:text-slate-400 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/[.08] dark:border-white/[.10] dark:bg-white/[.035]" placeholder="Tell us about your business, products, expected use case and integration needs..." />
             </label>
             <button type="button" className="group relative mt-6 h-[52px] overflow-hidden rounded-xl bg-brand-600 px-6 text-sm font-black text-white shadow-glow transition duration-500 hover:-translate-y-0.5 hover:bg-brand-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2">

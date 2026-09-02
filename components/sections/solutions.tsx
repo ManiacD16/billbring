@@ -12,7 +12,7 @@ export function Solutions() {
   return (
     <section className="section-transition py-28 sm:py-36 lg:py-40">
       <div className="section-shell">
-        <SectionHeading eyebrow="Built for your business" title={<>Built around how <span className="text-brand-500">you operate.</span></>} copy="Different businesses need different journeys. BillBring keeps the platform coherent while adapting the experience around your operating model." align="center" />
+        <SectionHeading eyebrow="Built for your business" title={<>Built around how <span className="text-brand-500">you operate.</span></>} copy="Different businesses need different journeys. billbring keeps the platform coherent while adapting the experience around your operating model." align="center" />
         <div className="mt-16 grid gap-5 lg:grid-cols-3" data-reveal-stagger>
           {solutions.map((solution) => {
             const Icon = solution.icon;

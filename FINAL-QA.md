@@ -1,4 +1,4 @@
-# BillBring Final Design QA
+# billbring Final Design QA
 
 Final polish pass completed on 25 August 2026.
 

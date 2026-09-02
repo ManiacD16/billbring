@@ -8,7 +8,7 @@ import { FinalCta } from "@/components/sections/final-cta";
 
 export const metadata: Metadata = {
   title: "Solutions",
-  description: "BillBring solutions for retailers, merchants and enterprises.",
+  description: "billbring solutions for retailers, merchants and enterprises.",
 };
 
 const audiences = [
@@ -55,9 +55,9 @@ export default function SolutionsPage() {
       <InternalHero
         eyebrow="Solutions"
         title={<>One platform, shaped around <span className="text-brand-500">your business.</span></>}
-        copy="Whether you serve customers at a counter, operate a growing business or embed financial services through APIs, BillBring gives you a consistent foundation."
+        copy="Whether you serve customers at a counter, operate a growing business or embed financial services through APIs, billbring gives you a consistent foundation."
         image="/images/home/11.png"
-        imageAlt="BillBring connected financial ecosystem for retailers, merchants and enterprises"
+        imageAlt="billbring connected financial ecosystem for retailers, merchants and enterprises"
         points={["Retailer operations", "Merchant payments", "Embedded finance"]}
       />
 
@@ -90,7 +90,7 @@ export default function SolutionsPage() {
 
       <section className="border-y border-slate-200/70 bg-[#f7fbf9] py-20 dark:border-white/[.08] dark:bg-white/[.015] sm:py-28">
         <div className="section-shell">
-          <SectionHeading eyebrow="Real operating contexts" title={<>Designed for the places where <span className="text-brand-500">money actually moves.</span></>} copy="Use cases stay visually grounded in the retailer, merchant and service environments BillBring is built to support." />
+          <SectionHeading eyebrow="Real operating contexts" title={<>Designed for the places where <span className="text-brand-500">money actually moves.</span></>} copy="Use cases stay visually grounded in the retailer, merchant and service environments billbring is built to support." />
           <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             {useCases.map((item) => (
               <article key={item.title} className="overflow-hidden rounded-[24px] border border-slate-200/80 bg-white dark:border-white/[.09] dark:bg-[#0b1118]">

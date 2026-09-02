@@ -67,7 +67,7 @@ export function InternalHero({
               <div className="flex items-center gap-3">
                 <span className="grid h-10 w-10 place-items-center rounded-xl bg-brand-500/[.12] text-brand-700 dark:text-brand-300"><Layers3 className="h-4 w-4" /></span>
                 <div>
-                  <p className="text-[9px] font-black uppercase tracking-[.15em] text-slate-400">BillBring ecosystem</p>
+                  <p className="text-[9px] font-black uppercase tracking-[.15em] text-slate-400">billbring ecosystem</p>
                   <p className="mt-1 text-sm font-black text-ink-950 dark:text-white">One connected operating experience</p>
                 </div>
               </div>

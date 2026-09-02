@@ -15,7 +15,7 @@ export function Security() {
     <section className="section-transition py-28 sm:py-36 lg:py-40">
       <div className="section-shell grid items-start gap-14 lg:grid-cols-[.78fr_1.22fr] lg:gap-16">
         <div className="lg:sticky lg:top-32">
-          <SectionHeading eyebrow="Trust layer" title={<>Security designed into <span className="text-brand-500">every journey.</span></>} copy="BillBring's interface language is built to make financial operations feel controlled, understandable and deliberate across every service." />
+          <SectionHeading eyebrow="Trust layer" title={<>Security designed into <span className="text-brand-500">every journey.</span></>} copy="billbring's interface language is built to make financial operations feel controlled, understandable and deliberate across every service." />
           <div data-reveal="scale" className="relative mt-10 aspect-[1.2/1] max-w-[520px] overflow-hidden rounded-[32px] bg-ink-950 p-8 text-white shadow-lift">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(18,175,124,.22),transparent_34%)]" />
             <div className="absolute inset-[14%] rounded-full border border-brand-400/[.15] animate-pulse-ring" />

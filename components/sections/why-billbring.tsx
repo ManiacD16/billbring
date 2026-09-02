@@ -9,11 +9,11 @@ const items = [
   [Headphones,"Support-ready","Give customers and operators a cleaner path to understand and resolve issues."],
 ];
 
-export function WhyBillBring() {
+export function Whybillbring() {
   return (
     <section className="section-transition py-28 sm:py-36 lg:py-40">
       <div className="section-shell">
-        <SectionHeading eyebrow="Why BillBring" title={<>Designed to make complexity <span className="text-brand-500">feel simple.</span></>} copy="The best financial infrastructure disappears into a clear operating experience. BillBring is designed around that principle." align="center" />
+        <SectionHeading eyebrow="Why billbring" title={<>Designed to make complexity <span className="text-brand-500">feel simple.</span></>} copy="The best financial infrastructure disappears into a clear operating experience. billbring is designed around that principle." align="center" />
         <div className="mt-16 grid gap-5 md:grid-cols-2 xl:grid-cols-6" data-reveal-stagger>
           {items.map(([Icon,title,copy], index)=>{
             const I=Icon as typeof Boxes;

@@ -31,7 +31,7 @@ export function Footer() {
       <div className="mx-auto w-full max-w-[1260px] px-5 sm:px-7 lg:px-8">
         <div className="grid gap-10 border-b border-white/[.10] pb-10 lg:grid-cols-[1.15fr_2.6fr]">
           <div>
-            <Image src="/brand/billbring-white.svg" alt="BillBring" width={180} height={40} className="h-9 w-auto" />
+            <Image src="/brand/billbring-white.svg" alt="billbring" width={180} height={40} className="h-9 w-auto" />
             <p className="mt-4 max-w-[260px] text-[11px] leading-5 text-slate-300">Bringing Bills and Payments<br />Together Seamlessly</p>
             <div className="mt-5 flex gap-2" aria-label="Social media">
               {['f', '𝕏', 'in', '▶'].map((item) => (
@@ -63,7 +63,7 @@ export function Footer() {
           </div>
         </div>
 
-        <p className="pt-6 text-center text-[9px] text-slate-400">© 2024 BillBring.com | All rights reserved.</p>
+        <p className="pt-6 text-center text-[9px] text-slate-400">© 2024 billbring.com | All rights reserved.</p>
       </div>
     </footer>
   );

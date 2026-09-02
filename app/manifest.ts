@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "BillBring",
-    short_name: "BillBring",
+    name: "billbring",
+    short_name: "billbring",
     description: "Bringing bills and payments together, seamlessly.",
     start_url: "/",
     display: "standalone",

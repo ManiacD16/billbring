@@ -1,6 +1,6 @@
-# BillBring Website — Awwwards Polish Pass
+# billbring Website — Awwwards Polish Pass
 
-Premium, responsive BillBring marketing website rebuilt from the approved product-design blueprint and then refined with an Awwwards-style interaction and visual-quality pass.
+Premium, responsive billbring marketing website rebuilt from the approved product-design blueprint and then refined with an Awwwards-style interaction and visual-quality pass.
 
 ## Stack
 
@@ -10,7 +10,7 @@ Premium, responsive BillBring marketing website rebuilt from the approved produc
 - GSAP + ScrollTrigger for scroll reveals, stagger choreography and parallax
 - next-themes for system-aware dark mode
 - Lucide for lightweight interface graphics
-- BillBring SVG assets supplied in the source brand package
+- billbring SVG assets supplied in the source brand package
 
 ## World-class polish added
 
@@ -31,7 +31,7 @@ Premium, responsive BillBring marketing website rebuilt from the approved produc
 - Upgraded API section with request flow, live response state and staggered code animation
 - Security visualization with scan animation and sticky trust narrative
 - Animated operations dashboard with chart and progress-state motion
-- Bento-style Why BillBring section
+- Bento-style Why billbring section
 - Evidence-led trust section with no fabricated logos, testimonials or metrics
 - Stronger conversion CTA and premium dark footer
 - Reworked login, partnership and pricing pages

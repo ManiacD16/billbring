@@ -1,7 +1,7 @@
 export default function Loading() {
   return (
     <div className="min-h-[72vh] pb-24 pt-24 sm:pt-28" role="status" aria-live="polite" aria-busy="true">
-      <p className="sr-only">Loading BillBring page</p>
+      <p className="sr-only">Loading billbring page</p>
       <div className="section-shell grid items-center gap-12 lg:grid-cols-[.82fr_1.18fr]">
         <div>
           <div className="skeleton-shimmer h-4 w-40 rounded-full" />

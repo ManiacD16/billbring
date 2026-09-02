@@ -6,7 +6,7 @@ import { FeatureCard } from "@/components/ui/feature-card";
 
 export const metadata: Metadata = {
   title: "Support",
-  description: "BillBring support and contact experience.",
+  description: "billbring support and contact experience.",
 };
 
 export default function SupportPage() {
@@ -15,9 +15,9 @@ export default function SupportPage() {
       <InternalHero
         eyebrow="Support"
         title={<>Get the right help, <span className="text-brand-500">without the runaround.</span></>}
-        copy="Connect customers, merchants, retailers and developers to the correct BillBring support channel with the context needed to resolve issues faster."
+        copy="Connect customers, merchants, retailers and developers to the correct billbring support channel with the context needed to resolve issues faster."
         image="/images/home/33.png"
-        imageAlt="BillBring 24x7 AI-assisted customer support experience"
+        imageAlt="billbring 24x7 AI-assisted customer support experience"
         points={["24×7 assistance", "Context-aware routing", "Clear escalation"]}
         cta={false}
       />
@@ -34,12 +34,12 @@ export default function SupportPage() {
       <section className="border-y border-slate-200/70 bg-[#f7fbf9] py-20 dark:border-white/[.08] dark:bg-white/[.015] sm:py-28">
         <div className="section-shell grid gap-6 lg:grid-cols-[1.1fr_.9fr]">
           <div className="overflow-hidden rounded-[28px] border border-slate-200/80 bg-white dark:border-white/[.09] dark:bg-[#0b1118]" data-reveal="left">
-            <div className="relative aspect-[16/9]"><Image src="/images/home/30.png" alt="BillBring always-on business support" fill sizes="(max-width: 1024px) 100vw, 55vw" className="object-cover" /></div>
-            <div className="p-7 sm:p-8"><p className="text-[10px] font-black uppercase tracking-[.17em] text-brand-600 dark:text-brand-300">Always-on support</p><h2 className="mt-3 text-3xl font-black tracking-[-.045em]">Help should be available where the work happens.</h2><p className="mt-4 text-sm leading-7 text-slate-500 dark:text-slate-400">Give operators a clear route from a question to the correct support flow without leaving the BillBring experience.</p></div>
+            <div className="relative aspect-[16/9]"><Image src="/images/home/30.png" alt="billbring always-on business support" fill sizes="(max-width: 1024px) 100vw, 55vw" className="object-cover" /></div>
+            <div className="p-7 sm:p-8"><p className="text-[10px] font-black uppercase tracking-[.17em] text-brand-600 dark:text-brand-300">Always-on support</p><h2 className="mt-3 text-3xl font-black tracking-[-.045em]">Help should be available where the work happens.</h2><p className="mt-4 text-sm leading-7 text-slate-500 dark:text-slate-400">Give operators a clear route from a question to the correct support flow without leaving the billbring experience.</p></div>
           </div>
 
           <div className="overflow-hidden rounded-[28px] border border-slate-200/80 bg-white dark:border-white/[.09] dark:bg-[#0b1118]" data-reveal="right">
-            <div className="relative aspect-[16/9] bg-black"><Image src="/images/home/7.png" alt="BillBring secure support and grievance handling" fill sizes="(max-width: 1024px) 100vw, 45vw" className="object-contain" /></div>
+            <div className="relative aspect-[16/9] bg-black"><Image src="/images/home/7.png" alt="billbring secure support and grievance handling" fill sizes="(max-width: 1024px) 100vw, 45vw" className="object-contain" /></div>
             <div className="p-7 sm:p-8"><p className="text-[10px] font-black uppercase tracking-[.17em] text-brand-600 dark:text-brand-300">Protected escalation</p><h2 className="mt-3 text-3xl font-black tracking-[-.045em]">Sensitive issues need a deliberate path.</h2><p className="mt-4 text-sm leading-7 text-slate-500 dark:text-slate-400">Grievance and security-related requests should be easy to identify, protect and route to the right team.</p></div>
           </div>
         </div>

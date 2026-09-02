@@ -45,7 +45,7 @@ export function Ecosystem() {
       <div className="absolute inset-x-0 top-0 -z-10 h-full bg-[linear-gradient(180deg,transparent,rgba(18,175,124,.04),transparent)]" />
       <div className="section-shell grid items-center gap-14 lg:grid-cols-[.78fr_1.22fr] lg:gap-16">
         <div>
-          <SectionHeading eyebrow="Connected ecosystem" title={<>One connection. <span className="text-brand-500">Every financial service.</span></>} copy="BillBring behaves like infrastructure, not a folder of disconnected utilities. Products share one visual language, one operating rhythm and one path to action." />
+          <SectionHeading eyebrow="Connected ecosystem" title={<>One connection. <span className="text-brand-500">Every financial service.</span></>} copy="billbring behaves like infrastructure, not a folder of disconnected utilities. Products share one visual language, one operating rhythm and one path to action." />
           <div className="mt-8 grid gap-3 sm:grid-cols-2" data-reveal-stagger>
             {[[Blocks, "19 capabilities"], [Braces, "API-first"], [WalletCards, "One operating layer"], [ArrowUpRight, "Connected journeys"]].map(([Icon, label]) => { const I = Icon as typeof Blocks; return <div key={String(label)} className="premium-surface flex items-center gap-3 rounded-2xl p-3.5"><span className="icon-tile relative h-9 w-9 text-brand-600 dark:text-brand-300"><I className="h-4 w-4" /></span><span className="relative text-sm font-extrabold">{String(label)}</span></div>; })}
           </div>
@@ -58,7 +58,7 @@ export function Ecosystem() {
               <Image src="/brand/billbring-mark.svg" alt="" width={52} height={52} className="h-12 w-12 dark:hidden" />
               <Image src="/brand/billbring-mark-white.svg" alt="" width={52} height={52} className="hidden h-12 w-12 dark:block" />
             </div>
-            <p className="relative mt-3 text-center text-[9px] font-black uppercase tracking-[.17em] text-slate-400">BillBring core</p>
+            <p className="relative mt-3 text-center text-[9px] font-black uppercase tracking-[.17em] text-slate-400">billbring core</p>
             <div className="relative mx-auto my-4 h-6 w-px bg-gradient-to-b from-brand-500/[.50] to-transparent" />
             <div className="relative grid grid-cols-2 gap-3">
               {nodes.map((node) => { const Icon = node.icon; return <div key={node.label} className="rounded-[20px] border border-slate-200/[.80] bg-white/[.70] p-4 text-center dark:border-white/[.10] dark:bg-white/[.04]"><span className="icon-tile mx-auto h-10 w-10 text-brand-600 dark:text-brand-300"><Icon className="h-[18px] w-[18px]" /></span><p className="mt-3 text-xs font-black leading-4">{node.label}</p></div>; })}

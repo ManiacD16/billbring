@@ -11,7 +11,7 @@ export default function NotFound() {
           <div data-reveal="left">
             <p className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[.18em] text-brand-600 dark:text-brand-300"><Sparkles className="h-3.5 w-3.5" /> 404 · Route not found</p>
             <h1 className="mt-6 text-balance text-[clamp(3rem,6vw,5.8rem)] font-black leading-[.92] tracking-[-.064em] text-ink-950 dark:text-white">This route moved outside the payment flow.</h1>
-            <p className="mt-6 max-w-xl text-base leading-7 text-slate-600 dark:text-slate-300">Return to BillBring and continue exploring the connected financial platform.</p>
+            <p className="mt-6 max-w-xl text-base leading-7 text-slate-600 dark:text-slate-300">Return to billbring and continue exploring the connected financial platform.</p>
             <div className="mt-8 flex flex-wrap gap-3"><ButtonLink href="/">Back to homepage</ButtonLink><ButtonLink href="/products" variant="secondary">Explore products</ButtonLink></div>
           </div>
           <div data-reveal="scale" className="noise relative min-h-[360px] overflow-hidden rounded-[36px] bg-ink-950 text-white shadow-lift sm:min-h-[430px]">
@@ -20,7 +20,7 @@ export default function NotFound() {
             <div className="absolute inset-[27%] rounded-full border border-dashed border-brand-400/[.20] animate-orbit" />
             <div className="absolute left-1/2 top-1/2 grid h-28 w-28 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-[30px] border border-white/[.10] bg-white/[.05] backdrop-blur"><RouteOff className="h-11 w-11 text-brand-300" /></div>
             <Image src="/brand/billbring-mark-white.svg" alt="" width={190} height={190} className="absolute -bottom-12 -right-10 h-48 w-48 rotate-12 opacity-[.055]" />
-            <p className="absolute bottom-7 left-7 text-[9px] font-black uppercase tracking-[.16em] text-white/[.45]">Reconnect to BillBring</p>
+            <p className="absolute bottom-7 left-7 text-[9px] font-black uppercase tracking-[.16em] text-white/[.45]">Reconnect to billbring</p>
           </div>
         </div>
       </div>

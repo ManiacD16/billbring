@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 }
 
 const architecture = [
-  [Layers3, "One operating layer", "Keep product actions and service state within a consistent BillBring experience."],
+  [Layers3, "One operating layer", "Keep product actions and service state within a consistent billbring experience."],
   [Gauge, "Clear performance state", "Present what happened, what is pending and what requires attention without ambiguity."],
   [Route, "Guided workflows", "Shape complex financial journeys into clean, understandable product paths."],
   [ShieldCheck, "Trust-minded UI", "Use deliberate confirmations, receipts, permissions and visible transaction outcomes."],
@@ -74,10 +74,10 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             <div className="absolute -inset-5 rounded-[2.25rem] bg-brand-500/[.08] blur-3xl" />
             <div className="relative overflow-hidden rounded-[30px] border border-slate-200/80 bg-white p-3 shadow-[0_34px_90px_-52px_rgba(8,18,37,.55)] dark:border-white/[.10] dark:bg-[#0b1118] sm:p-4">
               <div className="relative aspect-[16/10] overflow-hidden rounded-[22px] bg-black">
-                <Image src={productImage} alt={`${product.name} BillBring service experience`} fill priority sizes="(max-width: 1024px) 100vw, 56vw" className="object-cover" />
+                <Image src={productImage} alt={`${product.name} billbring service experience`} fill priority sizes="(max-width: 1024px) 100vw, 56vw" className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between gap-3 rounded-[16px] border border-white/15 bg-black/40 px-4 py-3 text-white backdrop-blur-md">
-                  <div><p className="text-[9px] font-black uppercase tracking-[.14em] text-brand-300">BillBring service</p><p className="mt-1 text-sm font-black">{product.name}</p></div>
+                  <div><p className="text-[9px] font-black uppercase tracking-[.14em] text-brand-300">billbring service</p><p className="mt-1 text-sm font-black">{product.name}</p></div>
                   <span className="inline-flex items-center gap-1.5 text-[10px] font-black">Connected <ArrowUpRight className="h-3.5 w-3.5 text-brand-400" /></span>
                 </div>
               </div>
@@ -95,7 +95,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           <SectionHeading
             eyebrow="Product architecture"
             title={<>Built to feel <span className="text-brand-500">simple in motion.</span></>}
-            copy={`${product.name} follows the same BillBring product principles: clear state, contextual actions, trustworthy feedback and integration-ready architecture.`}
+            copy={`${product.name} follows the same billbring product principles: clear state, contextual actions, trustworthy feedback and integration-ready architecture.`}
             align="center"
           />
           <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-4" data-reveal-stagger>
@@ -108,11 +108,11 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         <div className="section-shell grid items-center gap-10 lg:grid-cols-[.92fr_1.08fr]">
           <div data-reveal="left">
             <p className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[.17em] text-brand-600 dark:text-brand-300"><Sparkles className="h-3.5 w-3.5" /> Inside the ecosystem</p>
-            <h2 className="mt-4 max-w-[12ch] text-[clamp(2.7rem,4.8vw,5rem)] font-black leading-[.95] tracking-[-.06em]">{product.name} gets stronger inside the whole BillBring network.</h2>
+            <h2 className="mt-4 max-w-[12ch] text-[clamp(2.7rem,4.8vw,5rem)] font-black leading-[.95] tracking-[-.06em]">{product.name} gets stronger inside the whole billbring network.</h2>
             <p className="mt-5 max-w-xl text-sm leading-7 text-slate-500 dark:text-slate-400">Cross-service navigation, shared operational patterns and one brand system help customers understand more services without relearning the platform.</p>
           </div>
           <div data-reveal="right" className="overflow-hidden rounded-[28px] border border-slate-200/80 bg-white p-3 dark:border-white/[.09] dark:bg-[#0b1118]">
-            <div className="relative aspect-[16/10] overflow-hidden rounded-[20px] bg-black"><Image src="/images/home/11.png" alt="BillBring connected financial services ecosystem" fill sizes="(max-width: 1024px) 100vw, 54vw" className="object-cover" /></div>
+            <div className="relative aspect-[16/10] overflow-hidden rounded-[20px] bg-black"><Image src="/images/home/11.png" alt="billbring connected financial services ecosystem" fill sizes="(max-width: 1024px) 100vw, 54vw" className="object-cover" /></div>
           </div>
         </div>
       </section>

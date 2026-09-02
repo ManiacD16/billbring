@@ -1,5 +1,5 @@
 /*
- * BillBring legacy service-worker cleanup.
+ * billbring legacy service-worker cleanup.
  *
  * The current website does not use offline caching.
  * This file exists only to replace/unregister any previously
@@ -26,7 +26,7 @@ self.addEventListener("activate", (event) => {
       );
 
       /*
-       * Find currently open BillBring tabs.
+       * Find currently open billbring tabs.
        */
       const openClients =
         await self.clients.matchAll({

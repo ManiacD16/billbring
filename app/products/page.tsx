@@ -6,7 +6,7 @@ import { FinalCta } from "@/components/sections/final-cta";
 
 export const metadata: Metadata = {
   title: "Products",
-  description: "Explore all 19 BillBring products and financial service capabilities in one connected platform.",
+  description: "Explore all 19 billbring products and financial service capabilities in one connected platform.",
 };
 
 export default function ProductsPage() {
@@ -15,9 +15,9 @@ export default function ProductsPage() {
       <InternalHero
         eyebrow="Products"
         title={<>19 capabilities. <span className="text-brand-500">One connected platform.</span></>}
-        copy="Explore the complete BillBring product and service portfolio for payments, collections, payouts, remittance, assisted banking, transfers, POS, wallet, travel, insurance and loans."
+        copy="Explore the complete billbring product and service portfolio for payments, collections, payouts, remittance, assisted banking, transfers, POS, wallet, travel, insurance and loans."
         image="/images/home/12.png"
-        imageAlt="BillBring connected payment and financial services platform"
+        imageAlt="billbring connected payment and financial services platform"
         points={["Payments & collections", "Money movement", "Financial services"]}
         cta={false}
       />
