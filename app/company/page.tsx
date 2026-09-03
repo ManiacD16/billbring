@@ -211,14 +211,18 @@ export default function CompanyPage() {
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[#06101a]/88 via-[#06101a]/46 to-transparent" />
             <figcaption className="absolute inset-y-0 left-0 flex max-w-xl flex-col justify-end p-7 text-white sm:p-10">
-              <p className="text-[10px] font-black uppercase tracking-[.18em] text-brand-300">
-                Built for business growth
-              </p>
-<p className="mt-3 text-2xl font-black leading-tight tracking-[-.04em] sm:text-3xl">
-  <span className="box-decoration-clone bg-[#12af7c]/60 px-2 py-1 text-black">
-    Connected technology that helps partners operate, serve customers and grow with confidence.
-  </span>
-</p>
+              <div className="mt-3 bg-[#687487]/80 border border-cyan-200/80 px-2 py-1 rounded-md text-2xl font-black leading-tight tracking-[-.04em] sm:text-3xl">
+                <p className="text-[16px] font-black uppercase tracking-[.18em] text-brand-300 ">
+                  Built for business growth
+                </p>
+              </div>
+              <div className="mt-3 bg-[#12af7c]/60 border border-slate-200/80 px-2 py-1 rounded-md text-2xl font-black leading-tight tracking-[-.04em] sm:text-3xl">
+                <p className="mt-3 text-2xl font-black leading-tight tracking-[-.04em] sm:text-3xl">
+                  {/* <span className="box-decoration-clone bg-[#12af7c]/60 px-2 py-1 text-black"> */}
+                  Connected technology that helps partners operate, serve customers and grow with confidence.
+                  {/* </span> */}
+                </p>
+              </div>
             </figcaption>
           </figure>
         </div>
