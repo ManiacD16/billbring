@@ -106,7 +106,7 @@ export default function CompanyPage() {
               fill
               priority={false}
               sizes="(min-width: 1024px) 58vw, 100vw"
-              className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.025]"
+              className="object-contain transition-transform duration-700 ease-out group-hover:scale-[1.025]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#06101a]/75 via-[#06101a]/5 to-transparent" />
             <figcaption className="absolute inset-x-0 bottom-0 p-6 text-white sm:p-8">
@@ -158,7 +158,7 @@ export default function CompanyPage() {
               alt="Digital partnership and trust within the billbring ecosystem"
               fill
               sizes="(min-width: 1024px) 42vw, 100vw"
-              className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+              className="object-contain transition-transform duration-700 ease-out group-hover:scale-[1.03]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#06101a]/90 via-[#06101a]/10 to-transparent" />
             <figcaption className="absolute inset-x-0 bottom-0 p-7 text-white sm:p-9">
@@ -201,16 +201,16 @@ export default function CompanyPage() {
             ))}
           </div>
 
-          <figure className="group relative mt-6 min-h-[330px] overflow-hidden rounded-[30px] border border-slate-200/80 bg-[#07131c] dark:border-white/[.09] sm:min-h-[420px]">
+          <figure className="group relative mt-6 min-h-[330px] overflow-hidden rounded-[30px] border border-slate-200/80 dark:border-white/[.09] sm:min-h-[520px]">
             <Image
               src="/images/home/31.png"
               alt="billbring technology helping businesses operate and grow"
               fill
               sizes="100vw"
-              className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+              className="object-contain transition-transform duration-700 ease-out group-hover:scale-[1.02] rounded-[30px]"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[#06101a]/88 via-[#06101a]/46 to-transparent" />
-            <figcaption className="absolute inset-y-0 left-0 flex max-w-xl flex-col justify-end p-7 text-white sm:p-10">
+            <figcaption className="absolute inset-y-0 left-44 flex max-w-xl flex-col justify-end p-7 text-white sm:p-10">
               <div className="mt-3 bg-[#687487]/80 border border-cyan-200/80 px-2 py-1 rounded-md text-2xl font-black leading-tight tracking-[-.04em] sm:text-3xl">
                 <p className="text-[16px] font-black uppercase tracking-[.18em] text-brand-300 ">
                   Built for business growth
@@ -266,7 +266,7 @@ export default function CompanyPage() {
               alt="billbring ecosystem services including payments, banking, recharge, travel and insurance"
               fill
               sizes="(min-width: 1024px) 58vw, 100vw"
-              className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.025]"
+              className="object-contain transition-transform duration-700 ease-out group-hover:scale-[1.025]"
             />
           </figure>
         </div>

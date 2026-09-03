@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Building2, CheckCircle2, Landmark, Layers3, ShoppingCart, Waypoints } from "lucide-react";
 import { InternalHero } from "@/components/ui/internal-hero";
 import { ButtonLink } from "@/components/ui/button-link";
+import { PartnerApplicationForm } from "@/components/sections/partner-application-form";
 
 export const metadata: Metadata = {
   title: "Partners",
@@ -36,6 +37,8 @@ export default function PartnerPage() {
         points={["Connect", "Integrate", "Scale"]}
         cta={false}
       />
+
+      <PartnerApplicationForm />
 
       <section className="section-transition py-20 sm:py-28 lg:py-32">
         <div className="section-shell">

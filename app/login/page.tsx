@@ -19,10 +19,10 @@ export default function LoginPage() {
       <div className="section-shell relative">
         <div className="mx-auto grid max-w-6xl overflow-hidden rounded-[30px] border border-slate-200/80 bg-white shadow-[0_34px_90px_-54px_rgba(8,18,37,.52)] dark:border-white/[.09] dark:bg-[#0b1118] lg:grid-cols-[1.08fr_.92fr]" data-reveal="scale">
           <div className="relative min-h-[420px] overflow-hidden bg-black lg:min-h-[650px]">
-            <Image src="/images/home/2.png" alt="billbring dashboard and business workspace" fill priority sizes="(max-width: 1024px) 100vw, 54vw" className="object-cover" />
+            <Image src="/images/home/2.png" alt="billbring dashboard and business workspace" fill priority sizes="(max-width: 1024px) 100vw, 54vw" className="object-contain" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#06101a]/95 via-[#06101a]/35 to-transparent" />
             <div className="absolute right-5 top-5 hidden w-[42%] overflow-hidden rounded-[18px] border border-white/15 bg-black/35 p-2 shadow-2xl backdrop-blur-md sm:block">
-              <div className="relative aspect-[16/10] overflow-hidden rounded-[12px]"><Image src="/images/home/5.png" alt="billbring dashboard preview" fill sizes="240px" className="object-cover" /></div>
+              <div className="relative aspect-[16/10] overflow-hidden rounded-[12px]"><Image src="/images/home/5.png" alt="billbring dashboard preview" fill sizes="240px" className="object-contain" /></div>
             </div>
             <div className="absolute inset-x-0 bottom-0 p-7 text-white sm:p-9 lg:p-10">
               <p className="text-[10px] font-black uppercase tracking-[.18em] text-brand-300">Business workspace</p>

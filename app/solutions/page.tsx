@@ -90,7 +90,7 @@ export default function SolutionsPage() {
               <article id={solution.id} key={solution.id} className="scroll-mt-28 overflow-hidden rounded-[30px] border border-slate-200/80 bg-white shadow-[0_28px_82px_-58px_rgba(8,18,37,.5)] dark:border-white/[.09] dark:bg-[#0b1118]">
                 <div className={`grid lg:grid-cols-2 ${index % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""}`}>
                   <div className="relative min-h-[290px] bg-slate-100 lg:min-h-[520px] dark:bg-black">
-                    <Image src={solution.image} alt={solution.heading} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
+                    <Image src={solution.image} alt={solution.heading} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-contain" />
                   </div>
                   <div className="flex flex-col p-7 sm:p-9 lg:p-11">
                     <div className="flex items-center gap-3">

@@ -9,7 +9,7 @@ export function FinalCta() {
         <div className="relative overflow-hidden rounded-[30px] border border-white/[.08] bg-[#06101a] text-white shadow-[0_40px_100px_-58px_rgba(0,0,0,.8)]" data-reveal>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(18,175,124,.18),transparent_32%),linear-gradient(90deg,rgba(2,12,23,.98)_0%,rgba(2,12,23,.92)_48%,rgba(2,12,23,.28)_100%)]" />
           <div className="absolute right-0 top-0 h-full w-full opacity-35 lg:w-[48%] lg:opacity-90">
-            <Image src="/images/home/6.png" alt="billbring partnership and connected financial services" fill sizes="(max-width: 1024px) 100vw, 48vw" className="object-cover object-center" />
+            <Image src="/images/home/6.png" alt="billbring partnership and connected financial services" fill sizes="(max-width: 1024px) 100vw, 48vw" className="object-contain object-center" />
           </div>
           <div className="absolute inset-0 bg-gradient-to-r from-[#06101a] via-[#06101a]/90 to-[#06101a]/25 lg:via-[#06101a]/75" />
 

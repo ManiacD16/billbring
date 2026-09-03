@@ -4,9 +4,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { products } from "@/data/products";
+import { getProductDetail } from "@/data/product-details";
 import { getProductImage } from "@/data/product-images";
 import { ButtonLink } from "@/components/ui/button-link";
 import { FinalCta } from "@/components/sections/final-cta";
+import { ProductDetails } from "@/components/sections/product-details";
 
 export function generateStaticParams() {
   return products.map((product) => ({ slug: product.slug }));
@@ -17,9 +19,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const product = products.find((item) => item.slug === slug);
   if (!product) return {};
 
+  const detail = getProductDetail(slug);
+
   return {
     title: `${product.name} — ${product.category}`,
-    description: product.blurb,
+    description: detail?.overview[0] ?? product.blurb,
   };
 }
 
@@ -27,6 +31,9 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   const { slug } = await params;
   const product = products.find((item) => item.slug === slug);
   if (!product) notFound();
+
+  const detail = getProductDetail(slug);
+  if (!detail) notFound();
 
   const Icon = product.icon;
   const productIndex = products.findIndex((item) => item.slug === slug);
@@ -60,7 +67,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             <div className="absolute -inset-5 rounded-[2.25rem] bg-brand-500/[.08] blur-3xl" />
             <div className="relative overflow-hidden rounded-[30px] border border-slate-200/80 bg-white p-3 shadow-[0_34px_90px_-52px_rgba(8,18,37,.55)] dark:border-white/[.10] dark:bg-[#0b1118] sm:p-4">
               <div className="relative aspect-[16/10] overflow-hidden rounded-[22px] bg-slate-100 dark:bg-black">
-                <Image src={productImage} alt={`${product.name} by billbring`} fill priority sizes="(max-width: 1024px) 100vw, 54vw" className="object-cover" />
+                <Image src={productImage} alt={`${product.name} by billbring`} fill priority sizes="(max-width: 1024px) 100vw, 54vw" className="object-contain" />
               </div>
               <div className="flex items-center gap-3 px-2 pb-2 pt-4">
                 <span className="grid h-10 w-10 place-items-center rounded-xl bg-brand-500/[.10] text-brand-700 dark:text-brand-300"><CheckCircle2 className="h-4 w-4" /></span>
@@ -70,6 +77,8 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           </div>
         </div>
       </section>
+
+      <ProductDetails product={product} detail={detail} />
 
       {relatedProducts.length > 0 && (
         <section className="section-transition py-20 sm:py-28">

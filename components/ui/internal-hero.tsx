@@ -59,7 +59,7 @@ export function InternalHero({
           <div className="absolute -inset-5 rounded-[2.25rem] bg-brand-500/[.08] blur-3xl" />
           <div className="relative overflow-hidden rounded-[30px] border border-slate-200/80 bg-white p-3 shadow-[0_34px_90px_-52px_rgba(8,18,37,.55)] dark:border-white/[.10] dark:bg-[#0b1118] sm:p-4">
             <div className="relative aspect-[16/10] overflow-hidden rounded-[22px] bg-slate-100 dark:bg-black">
-              <Image src={image} alt={imageAlt} fill priority sizes="(max-width: 1024px) 100vw, 54vw" className="object-cover" />
+              <Image src={image} alt={imageAlt} fill priority sizes="(max-width: 1024px) 100vw, 54vw" className="object-contain" />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
             </div>
 

@@ -34,7 +34,7 @@ export default function PricingPage() {
         <div className="section-shell">
           <div className="grid overflow-hidden rounded-[30px] border border-slate-200/80 bg-white shadow-[0_32px_82px_-54px_rgba(8,18,37,.5)] dark:border-white/[.09] dark:bg-[#0b1118] lg:grid-cols-[.9fr_1.1fr]" data-reveal="scale">
             <div className="relative min-h-[380px] overflow-hidden bg-[#06101a] lg:min-h-[560px]">
-              <Image src="/images/home/28.png" alt="billbring AI-powered financial control" fill sizes="(max-width: 1024px) 100vw, 45vw" className="object-cover" />
+              <Image src="/images/home/28.png" alt="billbring AI-powered financial control" fill sizes="(max-width: 1024px) 100vw, 45vw" className="object-contain" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#06101a]/95 via-[#06101a]/25 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-7 text-white sm:p-9">
                 <p className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[.17em] text-brand-300"><Sparkles className="h-3.5 w-3.5" /> Commercial model</p>
@@ -71,7 +71,7 @@ export default function PricingPage() {
               { image: "/images/home/25.png", title: "Connected expense operations" },
             ].map((item) => (
               <article key={item.title} className="overflow-hidden rounded-[22px] border border-slate-200/80 bg-white dark:border-white/[.09] dark:bg-[#0b1118]">
-                <div className="relative aspect-[16/10]"><Image src={item.image} alt={item.title} fill sizes="(max-width: 768px) 100vw, 25vw" className="object-cover" /></div>
+                <div className="relative aspect-[16/10]"><Image src={item.image} alt={item.title} fill sizes="(max-width: 768px) 100vw, 25vw" className="object-contain" /></div>
                 <div className="p-4"><p className="text-sm font-black tracking-[-.02em]">{item.title}</p></div>
               </article>
             ))}
