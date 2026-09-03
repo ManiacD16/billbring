@@ -24,11 +24,11 @@ export const metadata: Metadata = {
     default: "billbring — Bringing Bills & Payments Together, Seamlessly.",
     template: "%s | billbring",
   },
-  description: "A unified platform to manage bill payments, collections, recharges and digital payments — all in one place.",
-  keywords: ["billbring", "payments", "BBPS", "AEPS", "DMT", "payment gateway", "payouts", "fintech", "digital payments"],
+  description: "billbring is a FinTech platform connecting businesses, retailers, distributors and financial institutions through simple, secure and technology-driven financial solutions.",
+  keywords: ["billbring", "payments", "UPI", "BBPS", "AEPS", "DMT", "payment gateway", "payouts", "wallet", "POS", "fintech", "digital financial services"],
   openGraph: {
     title: "billbring — Bringing Bills & Payments Together, Seamlessly.",
-    description: "A unified platform for bill payments, collections, recharges and digital payments.",
+    description: "Payments, banking services and digital financial solutions together on one connected ecosystem.",
     type: "website",
     siteName: "billbring",
   },
@@ -42,7 +42,7 @@ const organizationJsonLd = {
   name: "billbring",
   url: "https://www.billbring.com",
   logo: "https://www.billbring.com/brand/billbring-main.svg",
-  description: "A unified platform to manage bill payments, collections, recharges and digital payments.",
+  description: "Payments, banking services and digital financial solutions together on one connected ecosystem.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

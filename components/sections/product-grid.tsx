@@ -6,10 +6,11 @@ import { products, productGroups } from "@/data/products";
 import { ProductCard } from "@/components/ui/product-card";
 import { SectionHeading } from "@/components/ui/section-heading";
 
-const layoutSpans = [4,2,2,2,2,3,3,2,4,2,2,2,4,2,2,2,2,3,3] as const;
+const layoutSpans = [4, 2, 2, 2, 2, 3, 3, 2, 4, 2, 2, 2, 4] as const;
 
 export function ProductGrid({ compact = false }: { compact?: boolean }) {
   const [paused, setPaused] = useState(false);
+
   return (
     <section id="products" className={compact ? "section-transition relative overflow-hidden pb-28 pt-4 sm:pb-36 lg:pb-40" : "section-transition relative overflow-hidden py-28 sm:py-36 lg:py-40"}>
       <div className="pointer-events-none absolute inset-x-0 top-[12%] -z-10 h-[620px] bg-[radial-gradient(circle_at_50%_20%,rgba(18,175,124,.08),transparent_60%)]" />
@@ -18,14 +19,14 @@ export function ProductGrid({ compact = false }: { compact?: boolean }) {
           <div className="grid items-end gap-8 lg:grid-cols-[1.15fr_.85fr]">
             <SectionHeading
               eyebrow="Our products"
-              title={<>19 capabilities. <span className="text-brand-500">One connected platform.</span></>}
-              copy="Collect, move, manage and extend money through a product system designed to feel coherent from the first transaction to the last reconciliation."
+              title={<>Payments, banking and financial services. <span className="text-brand-500">One connected ecosystem.</span></>}
+              copy="Explore billbring products for collections, money movement, financial inclusion and business services."
             />
             <div data-reveal="right" className="lg:justify-self-end">
               <div className="premium-surface max-w-xl rounded-[26px] p-4 sm:p-5">
                 <div className="relative flex items-center gap-3">
                   <span className="icon-tile h-10 w-10 text-brand-700 dark:text-brand-300"><LayoutGrid className="h-4 w-4" /></span>
-                  <div><p className="text-[10px] font-black uppercase tracking-[.15em] text-slate-400">Platform map</p><p className="mt-1 text-sm font-bold">4 operating layers · 19 products & services</p></div>
+                  <div><p className="text-[10px] font-black uppercase tracking-[.15em] text-slate-400">Product menu</p><p className="mt-1 text-sm font-bold">4 service groups · 13 products</p></div>
                 </div>
                 <div className="relative mt-4 flex flex-wrap gap-2">{productGroups.map((group) => <span key={group} className="rounded-full border border-slate-200 bg-white/[.65] px-3 py-1.5 text-[11px] font-bold text-slate-600 dark:border-white/[.10] dark:bg-white/[.04] dark:text-slate-300">{group}</span>)}</div>
               </div>
@@ -33,7 +34,7 @@ export function ProductGrid({ compact = false }: { compact?: boolean }) {
           </div>
         ) : (
           <div data-reveal className="premium-surface flex flex-col gap-4 rounded-[26px] p-4 sm:flex-row sm:items-center sm:justify-between sm:p-5">
-            <div className="relative flex items-center gap-3"><span className="icon-tile h-10 w-10 text-brand-700 dark:text-brand-300"><LayoutGrid className="h-4 w-4" /></span><div><p className="text-[10px] font-black uppercase tracking-[.15em] text-slate-400">Browse portfolio</p><p className="mt-1 text-sm font-bold">19 standalone products & capabilities</p></div></div>
+            <div className="relative flex items-center gap-3"><span className="icon-tile h-10 w-10 text-brand-700 dark:text-brand-300"><LayoutGrid className="h-4 w-4" /></span><div><p className="text-[10px] font-black uppercase tracking-[.15em] text-slate-400">Browse products</p><p className="mt-1 text-sm font-bold">13 products across 4 service groups</p></div></div>
             <div className="relative flex flex-wrap gap-2">{productGroups.map((group) => <span key={group} className="rounded-full border border-slate-200 bg-white/[.65] px-3 py-1.5 text-[10px] font-bold text-slate-600 dark:border-white/[.10] dark:bg-white/[.04] dark:text-slate-300">{group}</span>)}</div>
           </div>
         )}
