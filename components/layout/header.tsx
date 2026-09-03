@@ -250,7 +250,7 @@ export function Header() {
           "relative mx-auto flex w-full items-center justify-between gap-4 overflow-visible px-4 transition-[max-width,min-height,width,margin-top,border-radius,border-color,background-color,box-shadow] duration-500 ease-out sm:px-6 lg:px-8",
           isScrolled
             ? "mt-0 min-h-[64px] w-[calc(100%_-_1rem)] max-w-[1240px] rounded-full border border-[#17305a]/[.10] bg-white/[.91] shadow-[0_18px_55px_-25px_rgba(16,33,63,.48),0_3px_12px_-7px_rgba(16,33,63,.18),inset_0_1px_0_rgba(255,255,255,.9)] backdrop-blur-2xl sm:w-[calc(100%_-_2rem)] dark:border-white/[.10] dark:bg-[#07120e]/[.91] dark:shadow-[0_22px_60px_-28px_rgba(0,0,0,.75),inset_0_1px_0_rgba(255,255,255,.06)]"
-            : "mt-0 min-h-[72px] max-w-[1480px] rounded-none border border-transparent bg-transparent sm:min-h-[80px] xl:min-h-[86px]",
+            : "mt-0 min-h-[72px] max-w-full rounded-none border border-transparent bg-transparent sm:min-h-[80px] xl:min-h-[86px]",
         )}
       >
         <HeaderNetworkGraphic compact={isScrolled} />
