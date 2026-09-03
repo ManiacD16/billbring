@@ -489,8 +489,8 @@ export function PartnerApplicationForm() {
           </p>
         </div>
 
-        <div className="grid gap-6 xl:grid-cols-[.72fr_1.28fr] xl:items-start">
-          <aside className="relative overflow-hidden rounded-[32px] bg-[#06111a] p-6 text-white shadow-[0_35px_100px_-55px_rgba(5,19,31,.9)] sm:p-8 xl:sticky xl:top-28">
+        <div className="grid gap-6">
+          {/* <aside className="relative overflow-hidden rounded-[32px] bg-[#06111a] p-6 text-white shadow-[0_35px_100px_-55px_rgba(5,19,31,.9)] sm:p-8 xl:sticky xl:top-28">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_10%,rgba(18,175,124,.22),transparent_30%),radial-gradient(circle_at_90%_90%,rgba(56,189,248,.11),transparent_28%)]" />
             <div className="relative">
               <p className="text-[10px] font-black uppercase tracking-[.19em] text-brand-300">Built for local growth</p>
@@ -516,7 +516,7 @@ export function PartnerApplicationForm() {
                 })}
               </div>
             </div>
-          </aside>
+          </aside> */}
 
           <div className="relative isolate overflow-hidden rounded-[32px] border border-slate-200/80 bg-white p-5 shadow-[0_28px_90px_-55px_rgba(8,18,37,.45)] dark:border-white/[.09] dark:bg-[#0b1118] sm:p-7 lg:p-9">
             <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
