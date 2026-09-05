@@ -20,6 +20,7 @@ export const productGroups = [
   "Move Money",
   "Banking & Financial Inclusion",
   "Business & Financial Services",
+  "Send Money Across India. Right From Your Store."
 ] as const;
 
 export type ProductGroup = (typeof productGroups)[number];
@@ -73,7 +74,7 @@ export const products: Product[] = [
   },
   {
     slug: "billbring",
-    name: "BillBring",
+    name: "billbring",
     category: "BBPS / Bill Payment / Recharge",
     group: "Collections & Payments",
     blurb: "Collect utility bills and provide mobile, DTH and other digital recharge services.",
@@ -93,8 +94,8 @@ export const products: Product[] = [
     slug: "bringremit",
     name: "BringRemit",
     category: "Domestic Money Transfer",
-    group: "Move Money",
-    blurb: "Transfer money securely across India through billbring reliable digital network.",
+    group: "Send Money Across India. Right From Your Store.",
+    blurb: "Turn your retail outlet into a convenient money-transfer point with BringRemit.",
     ...sharedVisual,
     icon: Landmark,
   },

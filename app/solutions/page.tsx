@@ -19,7 +19,7 @@ const solutions = [
     copy: "Offer multiple financial and digital services to your customers from one powerful platform.",
     label: "Services",
     items: ["DMT", "AEPS", "Cash Withdrawal", "BBPS", "Recharge", "UPI", "QR", "POS", "Travel", "Insurance"],
-    whyTitle: "Why BillBring?",
+    whyTitle: "Why billbring?",
     reasons: ["Multiple earning opportunities", "Easy-to-use dashboard", "Real-time transactions", "Dedicated support"],
     cta: "Become a Retailer",
     href: "/partner",
@@ -33,7 +33,7 @@ const solutions = [
     copy: "Manage your complete retailer network with powerful tools for onboarding, transactions, commissions and reporting.",
     label: "Features",
     items: ["Retailer Management", "Commission Management", "Transaction Monitoring", "Reports", "Dashboard", "Network Management"],
-    whyTitle: "Why BillBring?",
+    whyTitle: "Why billbring?",
     reasons: ["Grow your network", "Manage retailers easily", "Track business performance", "Centralized operations"],
     cta: "Become a Distributor",
     href: "/partner",
@@ -65,7 +65,7 @@ const solutions = [
     reasons: ["E-commerce", "Enterprises", "Retail Chains", "Platforms", "Aggregators", "Service Businesses"],
     cta: "Talk to Our Business Team",
     href: "/support",
-    image: "/images/home/14.png",
+    image: "/images/home/36.png",
   },
 ] as const;
 
@@ -75,7 +75,7 @@ export default function SolutionsPage() {
       <InternalHero
         eyebrow="Solutions"
         title={<>Solutions Built for <span className="text-brand-500">Every Business.</span></>}
-        copy="Whether you are a retailer, distributor, merchant or growing business, BillBring gives you the technology and financial services to simplify operations and unlock new opportunities."
+        copy="Whether you are a retailer, distributor, merchant or growing business, billbring gives you the technology and financial services to simplify operations and unlock new opportunities."
         image="/images/home/11.png"
         imageAlt="billbring solutions for retailers, distributors, merchants and businesses"
         points={["Retailers", "Distributors", "Businesses"]}

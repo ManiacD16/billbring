@@ -122,8 +122,8 @@ const productGraphicMap: Record<string, ProductGraphicConfig> = {
   billbring: {
     eyebrow: "Bill payment flow",
     title: "One place to manage bill payments and recharge services.",
-    helper: "BillBring helps agents and businesses serve everyday utility and recharge needs in a connected workflow.",
-    centerLabel: "BillBring",
+    helper: "billbring helps agents and businesses serve everyday utility and recharge needs in a connected workflow.",
+    centerLabel: "billbring",
     centerTitle: "Bill payment network",
     centerChips: ["Fetch", "Pay", "Confirm"],
     footer: "Utility collections and recharges become easier to explain, operate and complete.",

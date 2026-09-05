@@ -366,7 +366,7 @@ function PartnerNetworkGraphic() {
         <div className="grid h-28 w-28 place-items-center rounded-[28px] border border-brand-300/20 bg-[#07131c]/90 shadow-[0_22px_70px_-28px_rgba(18,175,124,.8)] backdrop-blur-xl">
           <div className="text-center">
             <div className="mx-auto grid h-10 w-10 place-items-center rounded-xl bg-brand-500 text-[#04120d]"><WalletCards className="h-5 w-5" /></div>
-            <p className="mt-2 text-[10px] font-black uppercase tracking-[.18em] text-brand-300">BillBring</p>
+            <p className="mt-2 text-[10px] font-black uppercase tracking-[.18em] text-brand-300">billbring</p>
           </div>
         </div>
 
@@ -482,7 +482,7 @@ export function PartnerApplicationForm() {
             <Sparkles className="h-3.5 w-3.5" /> Partner Network
           </div>
           <h2 className="mt-5 text-[clamp(2.7rem,5vw,5rem)] font-black leading-[.94] tracking-[-.06em]">
-            Become a <span className="text-brand-500">BillBring Partner.</span>
+            Become a <span className="text-brand-500">billbring Partner.</span>
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-slate-500 dark:text-slate-400 sm:text-lg">
             Join our growing fintech network and offer digital financial services to customers in your area.
@@ -605,7 +605,7 @@ export function PartnerApplicationForm() {
               </section>
 
               <section className="border-t border-slate-200/80 pt-9 dark:border-white/[.08]">
-                <StepHeading number="03" title="Services Interested In" copy="Select all the BillBring services you want to explore." />
+                <StepHeading number="03" title="Services Interested In" copy="Select all the billbring services you want to explore." />
                 <fieldset>
                   <legend className={labelClass}>Select the services you are interested in:</legend>
                   <div className="mt-4 grid gap-3 sm:grid-cols-2">
@@ -649,7 +649,7 @@ export function PartnerApplicationForm() {
               </section>
 
               <section className="border-t border-slate-200/80 pt-9 dark:border-white/[.08]">
-                <StepHeading number="05" title="Contact Preference" copy="Choose how you would like the BillBring partnership team to reach you." />
+                <StepHeading number="05" title="Contact Preference" copy="Choose how you would like the billbring partnership team to reach you." />
                 <fieldset>
                   <legend className={labelClass}>Preferred way to contact you:</legend>
                   <div className="mt-3 grid gap-3 sm:grid-cols-3">
@@ -661,7 +661,7 @@ export function PartnerApplicationForm() {
 
                 <label className="mt-6 flex cursor-pointer items-start gap-3 rounded-2xl border border-brand-500/15 bg-brand-50/60 p-4 dark:bg-brand-500/[.055]">
                   <input className="mt-1 h-4 w-4 shrink-0 accent-[#12AF7C]" type="checkbox" name="consent" required />
-                  <span className="text-sm font-semibold leading-6 text-slate-700 dark:text-slate-300">I agree to be contacted by the BillBring team regarding partnership opportunities.</span>
+                  <span className="text-sm font-semibold leading-6 text-slate-700 dark:text-slate-300">I agree to be contacted by the billbring team regarding partnership opportunities.</span>
                 </label>
               </section>
 
@@ -670,7 +670,7 @@ export function PartnerApplicationForm() {
                   <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0" />
                   <div>
                     <p className="font-black">Application submitted successfully.</p>
-                    <p className="mt-1 font-semibold">Thank you for your interest in partnering with BillBring. Our team will review your application and contact you shortly.</p>
+                    <p className="mt-1 font-semibold">Thank you for your interest in partnering with billbring. Our team will review your application and contact you shortly.</p>
                   </div>
                 </div>
               )}

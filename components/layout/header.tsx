@@ -31,7 +31,7 @@ const productMenu = [
       { name: "PayBring", description: "Payment Gateway / Collection", href: "/products/paybring" },
       { name: "BringUPI", description: "UPI Payments / Collection", href: "/products/bringupi" },
       { name: "BringQR", description: "UPI / QR Payments", href: "/products/bringqr" },
-      { name: "BillBring", description: "BBPS / Bill Payment / Recharge", href: "/products/billbring" },
+      { name: "billbring", description: "BBPS / Bill Payment / Recharge", href: "/products/billbring" },
     ],
   },
   {
@@ -260,7 +260,7 @@ export function Header() {
             <span className="flex items-end">
               <Image src="/brand/billbring.svg" alt="billbring" width={170} height={38} priority className={cn("w-auto transition-[height] duration-500 dark:hidden", isScrolled ? "h-[29px] sm:h-[34px]" : "h-[31px] sm:h-[42px]")} />
               <Image src="/brand/billbring-home.svg" alt="billbring" width={170} height={38} priority className={cn("hidden w-auto transition-[height] duration-500 dark:block", isScrolled ? "h-[29px] sm:h-[34px]" : "h-[31px] sm:h-[42px]")} />
-              <span className="mb-[2px] ml-0.5 text-[10px] font-extrabold text-[#11995a] dark:text-[#54e394]">.com</span>
+              {/* <span className="mb-[2px] ml-0.5 text-[10px] font-extrabold text-[#11995a] dark:text-[#54e394]">.com</span> */}
             </span>
           </span>
         </Link>
@@ -310,7 +310,7 @@ export function Header() {
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 7, scale: 0.985 }}
                   transition={{ duration: 0.17, ease }}
-                  className="absolute left-1/2 top-full z-[160] -translate-x-1/2 pt-3"
+                  className="absolute left-0 top-full z-[160] -translate-x-1/2 pt-3"
                 >
                   <div className="relative w-[292px] overflow-hidden rounded-[22px] border border-[#17305a]/[.10] bg-white/[.94] p-2.5 shadow-[0_24px_70px_-30px_rgba(16,33,63,.50),0_7px_22px_-12px_rgba(16,33,63,.22),inset_0_1px_0_rgba(255,255,255,.92)] backdrop-blur-2xl dark:border-white/[.10] dark:bg-[#07120e]/[.95] dark:shadow-[0_26px_70px_-30px_rgba(0,0,0,.78),inset_0_1px_0_rgba(255,255,255,.05)]">
                     <CompanyDropdownGraphic />
@@ -321,7 +321,7 @@ export function Header() {
                       </div>
                       <div>
                         <p className="text-[9px] font-black uppercase tracking-[.19em] text-[#0e9a55] dark:text-[#54e394]">Company</p>
-                        <p className="mt-0.5 text-[11px] font-medium text-[#66748c] dark:text-white/58">Inside BillBring</p>
+                        <p className="mt-0.5 text-[11px] font-medium text-[#66748c] dark:text-white/58">Inside billbring</p>
                       </div>
                     </div>
 

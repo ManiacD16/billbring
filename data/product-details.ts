@@ -146,7 +146,7 @@ export const productDetails: Record<string, ProductDetail> = {
     eyebrow: "Bill payment & recharge",
     overviewTitle: "One service layer for everyday bills and recharges.",
     overview: [
-      "BillBring is designed for businesses, retailers and assisted-service networks that want to provide bill payment and recharge journeys from one connected platform. It brings commonly requested consumer payment services into a structured operating experience.",
+      "billbring is designed for businesses, retailers and assisted-service networks that want to provide bill payment and recharge journeys from one connected platform. It brings commonly requested consumer payment services into a structured operating experience.",
       "From bill lookup to payment completion, the goal is to help partners serve customers more efficiently while keeping service activity easier to understand and manage.",
     ],
     metrics: [
@@ -156,14 +156,14 @@ export const productDetails: Record<string, ProductDetail> = {
       { value: "ONE", label: "SERVICE FLOW", note: "Reduce fragmentation across bill payment operations." },
     ],
     capabilitiesTitle: "Built for high-frequency everyday service needs.",
-    capabilitiesIntro: "BillBring helps partners create a consistent customer journey across recurring bills and recharge services without building separate experiences for every category.",
+    capabilitiesIntro: "billbring helps partners create a consistent customer journey across recurring bills and recharge services without building separate experiences for every category.",
     capabilities: [
       { title: "Bill payment journeys", description: "Support customer bill-payment workflows for enabled biller categories through a structured service experience." },
       { title: "Recharge services", description: "Offer commonly used recharge journeys as part of the same retailer or digital platform." },
       { title: "Assisted-service ready", description: "Give agents and retailers a clear operating flow for serving customers at the point of need." },
       { title: "Service activity visibility", description: "Keep transaction status and service outcomes clearer for day-to-day operational handling." },
     ],
-    whyTitle: "Why choose BillBring",
+    whyTitle: "Why choose billbring",
     whyIntro: "Bill payment is a repeat-use service. The experience needs to be simple for the customer and efficient for the partner delivering it.",
     benefits: [
       { title: "More services from one platform", description: "Let customers access multiple bill payment and recharge journeys without forcing partners to maintain separate systems." },

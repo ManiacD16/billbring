@@ -274,7 +274,7 @@ export default function CompanyPage() {
 
       <section className="section-transition py-20 sm:py-28">
         <div className="section-shell grid gap-5 md:grid-cols-2">
-          <article
+          {/* <article
             id="leadership"
             className="scroll-mt-28 rounded-[26px] border border-slate-200/80 bg-white p-7 dark:border-white/[.09] dark:bg-[#0b1118]"
           >
@@ -302,7 +302,7 @@ export default function CompanyPage() {
             <p className="mt-3 text-sm leading-6 text-slate-500 dark:text-slate-400">
               This section is reserved for approved careers information.
             </p>
-          </article>
+          </article> */}
         </div>
       </section>
 
