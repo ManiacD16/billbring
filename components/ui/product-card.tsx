@@ -13,7 +13,7 @@ export function ProductCard({ product, index, featured = false }: { product: Pro
   return (
     <article className={`group relative h-full overflow-hidden rounded-[26px] border border-slate-200/80 bg-white shadow-[0_24px_70px_-50px_rgba(8,18,37,.5)] transition duration-500 hover:-translate-y-1 hover:border-brand-500/25 hover:shadow-[0_32px_82px_-48px_rgba(8,18,37,.55)] dark:border-white/[.09] dark:bg-[#0b1118] ${featured ? "min-h-[500px]" : "min-h-[450px]"}`}>
       <div className={`relative overflow-hidden bg-slate-100 dark:bg-black ${featured ? "aspect-[16/9]" : "aspect-[16/10]"}`}>
-        <Image src={image} alt={`${product.name} by billbring`} fill sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw" className="object-contain transition duration-700 group-hover:scale-[1.025]" />
+        <Image src={image} alt={`${product.name} by billbring`} fill sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw" className="object-cover transition duration-700 group-hover:scale-[1.025]" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent" />
         <span className="absolute left-4 top-4 rounded-full border border-white/20 bg-black/35 px-3 py-1.5 text-[9px] font-black uppercase tracking-[.14em] text-white backdrop-blur-md">{String(index + 1).padStart(2, "0")} · {product.group}</span>
       </div>

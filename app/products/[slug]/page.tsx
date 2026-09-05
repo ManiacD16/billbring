@@ -5,10 +5,11 @@ import { notFound } from "next/navigation";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { products } from "@/data/products";
 import { getProductDetail } from "@/data/product-details";
-import { getProductImage } from "@/data/product-images";
+import { getProductImage, getProductMedia } from "@/data/product-images";
 import { ButtonLink } from "@/components/ui/button-link";
 import { FinalCta } from "@/components/sections/final-cta";
 import { ProductDetails } from "@/components/sections/product-details";
+import { ProductMediaGallery } from "@/components/sections/product-media-gallery";
 
 export function generateStaticParams() {
   return products.map((product) => ({ slug: product.slug }));
@@ -37,7 +38,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
 
   const Icon = product.icon;
   const productIndex = products.findIndex((item) => item.slug === slug);
-  const productImage = getProductImage(slug);
+  const productMedia = getProductMedia(slug);
   const relatedProducts = products.filter((item) => item.group === product.group && item.slug !== product.slug);
 
   return (
@@ -45,6 +46,9 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       <section className="relative overflow-hidden border-b border-slate-200/70 bg-[#f7fbf9] py-14 dark:border-white/[.08] dark:bg-[#05090d] sm:py-20 lg:py-24">
         <div className="pointer-events-none absolute inset-0 opacity-40 [background-image:linear-gradient(rgba(18,175,124,.05)_1px,transparent_1px),linear-gradient(90deg,rgba(18,175,124,.05)_1px,transparent_1px)] [background-size:52px_52px] dark:opacity-20" />
         <div className="pointer-events-none absolute -right-24 top-0 h-96 w-96 rounded-full bg-brand-500/[.13] blur-[120px]" />
+        <div className="pointer-events-none absolute -left-16 bottom-10 hidden h-56 w-56 rounded-full border border-brand-500/10 lg:block" />
+        <div className="pointer-events-none absolute -left-5 bottom-[6.5rem] hidden h-32 w-32 rounded-full border border-brand-500/15 lg:block" />
+        <div className="pointer-events-none absolute right-[8%] top-12 h-28 w-28 opacity-30 [background-image:radial-gradient(rgba(18,175,124,.45)_1.2px,transparent_1.2px)] [background-size:14px_14px] [mask-image:radial-gradient(circle,black,transparent_72%)]" />
 
         <div className="section-shell relative grid items-center gap-10 lg:grid-cols-[.88fr_1.12fr] lg:gap-14">
           <div data-reveal="left">
@@ -67,7 +71,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             <div className="absolute -inset-5 rounded-[2.25rem] bg-brand-500/[.08] blur-3xl" />
             <div className="relative overflow-hidden rounded-[30px] border border-slate-200/80 bg-white p-3 shadow-[0_34px_90px_-52px_rgba(8,18,37,.55)] dark:border-white/[.10] dark:bg-[#0b1118] sm:p-4">
               <div className="relative aspect-[16/10] overflow-hidden rounded-[22px] bg-slate-100 dark:bg-black">
-                <Image src={productImage} alt={`${product.name} by billbring`} fill priority sizes="(max-width: 1024px) 100vw, 54vw" className="object-contain" />
+                <Image src={productMedia.hero} alt={`${product.name} by billbring`} fill priority sizes="(max-width: 1024px) 100vw, 54vw" className="object-cover transition duration-700 hover:scale-[1.015]" />
               </div>
               <div className="flex items-center gap-3 px-2 pb-2 pt-4">
                 <span className="grid h-10 w-10 place-items-center rounded-xl bg-brand-500/[.10] text-brand-700 dark:text-brand-300"><CheckCircle2 className="h-4 w-4" /></span>
@@ -77,6 +81,8 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           </div>
         </div>
       </section>
+
+      <ProductMediaGallery product={product} images={productMedia.gallery} />
 
       <ProductDetails product={product} detail={detail} />
 
@@ -91,7 +97,12 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
               {relatedProducts.map((item) => {
                 const RelatedIcon = item.icon;
                 return (
-                  <Link key={item.slug} href={`/products/${item.slug}`} className="group rounded-[24px] border border-slate-200/80 bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-brand-500/30 dark:border-white/[.09] dark:bg-[#0b1118]">
+                  <Link key={item.slug} href={`/products/${item.slug}`} className="group overflow-hidden rounded-[24px] border border-slate-200/80 bg-white transition duration-300 hover:-translate-y-1 hover:border-brand-500/30 hover:shadow-[0_28px_70px_-48px_rgba(8,18,37,.48)] dark:border-white/[.09] dark:bg-[#0b1118]">
+                    <div className="relative aspect-[16/9] overflow-hidden bg-slate-100 dark:bg-black">
+                      <Image src={getProductImage(item.slug)} alt={`${item.name} by billbring`} fill sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw" className="object-cover transition duration-500 group-hover:scale-[1.035]" />
+                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+                    </div>
+                    <div className="p-6">
                     <div className="flex items-start justify-between gap-4">
                       <span className="grid h-11 w-11 place-items-center rounded-xl bg-brand-500/[.09] text-brand-700 dark:text-brand-300"><RelatedIcon className="h-5 w-5" /></span>
                       <ArrowUpRight className="h-4 w-4 text-slate-400 transition group-hover:text-brand-500" />
@@ -99,6 +110,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                     <h3 className="mt-6 text-xl font-black tracking-[-.035em]">{item.name}</h3>
                     <p className="mt-2 text-[10px] font-black uppercase tracking-[.13em] text-brand-600 dark:text-brand-300">{item.category}</p>
                     <p className="mt-3 text-sm leading-6 text-slate-500 dark:text-slate-400">{item.blurb}</p>
+                    </div>
                   </Link>
                 );
               })}

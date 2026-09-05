@@ -108,7 +108,7 @@ function CheckList({ items, tone = "green" }: { items: string[]; tone?: "green" 
 
 export function HomeRedesign() {
   return (
-    <div className="home-reference-page bg-[#fbfdfc] text-[#10213f] dark:bg-[#06101a] dark:text-white">
+    <div className="home-reference-page bg-transparent text-[#10213f] dark:text-white">
       <section className="home-reference-hero relative overflow-hidden border-b border-[#10213f]/[.05] dark:border-white/[.05]">
         <div className="home-city-lines pointer-events-none absolute inset-x-0 bottom-0 h-[48%] opacity-55 dark:opacity-20" />
         <div className="relative mx-auto w-full max-w-[1260px] px-4 pb-9 pt-10 sm:px-6 sm:pb-12 sm:pt-12 lg:px-8 lg:pt-14">

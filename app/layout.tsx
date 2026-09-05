@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { SiteBackground } from "@/components/layout/site-background";
 import { SiteLoader } from "@/components/motion/site-loader";
 import { ServiceWorkerCleanup } from "@/components/system/service-worker-cleanup";
 import { ScrollProgress } from "@/components/motion/scroll-progress";
@@ -48,18 +49,21 @@ const organizationJsonLd = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="min-h-screen bg-[var(--background)] text-[var(--foreground)] antialiased">
-        <a href="#main-content" className="skip-link">Skip to main content</a>
-        <ThemeProvider>
-          <ServiceWorkerCleanup />
-          <MotionProvider>
-            <SiteLoader />
-            <ScrollProgress />
-            <Header />
-            <main id="main-content" tabIndex={-1}>{children}</main>
-            <Footer />
-          </MotionProvider>
-        </ThemeProvider>
+      <body className="site-body min-h-screen bg-[var(--background)] text-[var(--foreground)] antialiased">
+        <SiteBackground />
+        <div className="site-content">
+          <a href="#main-content" className="skip-link">Skip to main content</a>
+          <ThemeProvider>
+            <ServiceWorkerCleanup />
+            <MotionProvider>
+              <SiteLoader />
+              <ScrollProgress />
+              <Header />
+              <main id="main-content" tabIndex={-1}>{children}</main>
+              <Footer />
+            </MotionProvider>
+          </ThemeProvider>
+        </div>
         <Script id="organization-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }} />
       </body>
     </html>
